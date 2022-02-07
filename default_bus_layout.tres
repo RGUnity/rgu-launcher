@@ -1,0 +1,10 @@
+[gd_resource type="AudioBusLayout" load_steps=2 format=2]
+
+[sub_resource type="AudioEffectPitchShift" id=2]
+resource_name = "PitchShift"
+pitch_scale = 1.1
+
+[resource]
+bus/0/volume_db = -0.923751
+bus/0/effect/0/effect = SubResource( 2 )
+bus/0/effect/0/enabled = true
