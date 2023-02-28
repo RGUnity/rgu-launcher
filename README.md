@@ -1,6 +1,11 @@
 # Redguard Unity Launcher
 A Godot-based launcher to read and write data from a text file using Godot's native ConfigFile class.
 
+## Project Status
+Currently not integrated with RGUnity, therefore more of a proof-of-concept.
+
+
+## Technical info
 The config file is stored at `/APPDATA/LOCALLOW/RGUnity/RedguardUnity/Config.cfg`
 
 Uses Godot version 3.5.beta1
