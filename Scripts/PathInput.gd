@@ -1,8 +1,8 @@
 extends LineEdit
 
-var configManagerPath = "/root/Control/WindowDialog"
-export(String) var section
-export(String) var value
+var configManagerPath = "/root/Control/Window"
+@export var section: String
+@export var value: String
 
 
 func _on_WindowDialog_loaded():

@@ -1,1168 +1,717 @@
-[gd_scene load_steps=52 format=2]
+[gd_scene load_steps=36 format=3 uid="uid://0k22n8bafibo"]
 
-[ext_resource path="res://Fonts/Androgyne_TB.otf" type="DynamicFontData" id=1]
-[ext_resource path="res://Sprites/Launcher.png" type="Texture" id=2]
-[ext_resource path="res://Scripts/ButtonSounds.gd" type="Script" id=3]
-[ext_resource path="res://Sounds/RATTLE1.wav" type="AudioStream" id=4]
-[ext_resource path="res://addons/randomAudioStreamPlayer/random_audio_stream_player.gd" type="Script" id=5]
-[ext_resource path="res://Sounds/RATTLE2.wav" type="AudioStream" id=6]
-[ext_resource path="res://Sounds/RATTLE3.wav" type="AudioStream" id=7]
-[ext_resource path="res://Scripts/GameOptions.gd" type="Script" id=8]
-[ext_resource path="res://Sprites/WindowBorder2.png" type="Texture" id=9]
-[ext_resource path="res://Sprites/Checkbox_checked.png" type="Texture" id=10]
-[ext_resource path="res://Sprites/Checkbox_disabled.png" type="Texture" id=11]
-[ext_resource path="res://Scripts/Display/WindowMode.gd" type="Script" id=12]
-[ext_resource path="res://Sprites/Border.png" type="Texture" id=13]
-[ext_resource path="res://Styles/DropdownStyle.tres" type="StyleBox" id=14]
-[ext_resource path="res://Fonts/Roboto_small.tres" type="DynamicFont" id=15]
-[ext_resource path="res://Sprites/DropdownArrow.png" type="Texture" id=16]
-[ext_resource path="res://Scripts/Enhancements/maxFPS.gd" type="Script" id=17]
-[ext_resource path="res://Sprites/UpDown.png" type="Texture" id=18]
-[ext_resource path="res://Scripts/PlayRedguard.gd" type="Script" id=19]
-[ext_resource path="res://Scripts/Quit.gd" type="Script" id=20]
-[ext_resource path="res://Sprites/SliderLine.png" type="Texture" id=21]
-[ext_resource path="res://Sprites/Slider_Small.png" type="Texture" id=22]
-[ext_resource path="res://Sprites/Checkbox.png" type="Texture" id=23]
-[ext_resource path="res://Styles/Button_pressed.tres" type="StyleBox" id=24]
-[ext_resource path="res://Styles/PopupMenu.tres" type="Theme" id=25]
-[ext_resource path="res://Scripts/PathInput.gd" type="Script" id=27]
-[ext_resource path="res://Scripts/ConfigManager.gd" type="Script" id=28]
-[ext_resource path="res://Scripts/Enhancements/FPSLimit.gd" type="Script" id=29]
-[ext_resource path="res://Styles/Button.tres" type="StyleBox" id=30]
-[ext_resource path="res://Scripts/Display/Resolutions_Dropdown.gd" type="Script" id=31]
-[ext_resource path="res://Scripts/Display/useDesktopRes.gd" type="Script" id=32]
-[ext_resource path="res://Scripts/OpenFileDialog.gd" type="Script" id=33]
-[ext_resource path="res://Styles/Dropdown_disabled.tres" type="StyleBox" id=34]
-[ext_resource path="res://Scripts/Enhancements/vsync.gd" type="Script" id=35]
-[ext_resource path="res://Scripts/Config_BCheckbox.gd" type="Script" id=36]
-[ext_resource path="res://Styles/Label.tres" type="StyleBox" id=37]
-[ext_resource path="res://Scripts/Config_Slider.gd" type="Script" id=38]
-[ext_resource path="res://Scripts/CloseWindow.gd" type="Script" id=39]
+[ext_resource type="Texture2D" uid="uid://o34sfyeojsgi" path="res://Sprites/Launcher.png" id="2"]
+[ext_resource type="LabelSettings" uid="uid://bfqrdk86cm1io" path="res://Styles Main Window/TextButtonShadow_large.tres" id="2_tu6kg"]
+[ext_resource type="LabelSettings" uid="uid://dmnwc0n77e1a7" path="res://Styles Main Window/TextButtonShadow.tres" id="3_in2np"]
+[ext_resource type="Texture2D" uid="uid://dbfyhoxow1dvx" path="res://Sprites/WindowBorder.png" id="3_lyplw"]
+[ext_resource type="Theme" uid="uid://bxe5pf3einr0o" path="res://Styles Main Window/Button.tres" id="3_puetd"]
+[ext_resource type="Texture2D" uid="uid://b4dy3pe5sxpoe" path="res://Sprites/WindowClose.png" id="4_add16"]
+[ext_resource type="Theme" uid="uid://h5443ot80yao" path="res://Styles Main Window/Button_large.tres" id="4_xv85j"]
+[ext_resource type="Script" path="res://Scripts/LoadDefaultConfig.gd" id="5_1bv2j"]
+[ext_resource type="Script" path="res://Scripts/LoadConfig.gd" id="5_hm5qs"]
+[ext_resource type="Script" path="res://Scripts/SaveConfig.gd" id="7_tuk1d"]
+[ext_resource type="Script" path="res://Scripts/GameOptions.gd" id="8"]
+[ext_resource type="Script" path="res://Scripts/ButtonSignalReceiver.gd" id="8_epfgc"]
+[ext_resource type="Theme" uid="uid://npsys71erk22" path="res://Styles Popup Window/PopupMenu.tres" id="8_on04f"]
+[ext_resource type="Texture2D" uid="uid://7xlw7muxppnq" path="res://Sprites/WindowBorder2.png" id="9"]
+[ext_resource type="Script" path="res://Scripts/DependencyManager.gd" id="9_y500b"]
+[ext_resource type="StyleBox" uid="uid://4l8mmmx7u3qw" path="res://Styles Popup Window/DropdownStyle.tres" id="12_05xnm"]
+[ext_resource type="Script" path="res://Scripts/OpenFileDialog.gd" id="12_mqnbw"]
+[ext_resource type="Texture2D" uid="uid://dvdp55wfyfnqd" path="res://Sprites/Border.png" id="13"]
+[ext_resource type="Texture2D" uid="uid://d25o7fuik0h20" path="res://Sprites/UpDown.png" id="17_q4gb4"]
+[ext_resource type="Script" path="res://Scripts/PlayRedguard.gd" id="19"]
+[ext_resource type="Script" path="res://Scripts/Quit.gd" id="20"]
+[ext_resource type="Script" path="res://Scripts/ConfigManager.gd" id="28"]
+[ext_resource type="Script" path="res://Scripts/CloseWindow.gd" id="39"]
 
-[sub_resource type="DynamicFont" id=3]
-size = 48
-font_data = ExtResource( 1 )
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_swe2c"]
 
-[sub_resource type="DynamicFont" id=4]
-size = 36
-font_data = ExtResource( 1 )
+[sub_resource type="Theme" id="Theme_cmocx"]
+MarginContainer/constants/margin_bottom = 0
+MarginContainer/constants/margin_left = 3
+MarginContainer/constants/margin_right = 3
+MarginContainer/constants/margin_top = 3
 
-[sub_resource type="DynamicFont" id=1]
-size = 48
-outline_size = 1
-outline_color = Color( 0, 0, 0, 1 )
-font_data = ExtResource( 1 )
+[sub_resource type="Theme" id="Theme_q1g54"]
+MarginContainer/constants/margin_bottom = 0
+MarginContainer/constants/margin_left = 4
+MarginContainer/constants/margin_right = 0
+MarginContainer/constants/margin_top = 0
 
-[sub_resource type="DynamicFont" id=2]
-size = 36
-outline_size = 1
-outline_color = Color( 0, 0, 0, 1 )
-font_data = ExtResource( 1 )
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bglpd"]
 
-[sub_resource type="StyleBoxTexture" id=17]
-texture = ExtResource( 9 )
-region_rect = Rect2( 0, 0, 32, 25 )
-margin_left = 4.0
-margin_right = 22.0
-margin_top = 22.0
-margin_bottom = 2.0
-expand_margin_top = 22.0
+[sub_resource type="Theme" id="Theme_g05jl"]
+Label/styles/normal = SubResource("StyleBoxEmpty_bglpd")
 
-[sub_resource type="CanvasItemMaterial" id=21]
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_mlega"]
 
-[sub_resource type="StyleBoxTexture" id=9]
-texture = ExtResource( 21 )
-region_rect = Rect2( 0, 0, 6, 4 )
-margin_left = 2.0
-margin_right = 2.0
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xgv7d"]
 
-[sub_resource type="CanvasItemMaterial" id=22]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6lonk"]
 
-[sub_resource type="StyleBoxFlat" id=23]
-bg_color = Color( 0.941176, 0.941176, 0.941176, 1 )
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_h1inq"]
 
-[sub_resource type="StyleBoxFlat" id=24]
-bg_color = Color( 0.941176, 0.941176, 0.941176, 1 )
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xw2vr"]
 
-[sub_resource type="StyleBoxFlat" id=25]
-bg_color = Color( 0.941176, 0.941176, 0.941176, 1 )
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_aaf83"]
 
-[sub_resource type="StyleBoxFlat" id=26]
-bg_color = Color( 0.941176, 0.941176, 0.941176, 1 )
-
-[sub_resource type="StyleBoxTexture" id=16]
-texture = ExtResource( 23 )
-region_rect = Rect2( 0, 0, 13, 13 )
-margin_left = 2.0
-margin_right = 2.0
-margin_top = 2.0
-margin_bottom = 2.0
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gqn3f"]
 
 [node name="Control" type="Control"]
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-__meta__ = {
-"_edit_use_anchors_": false,
-"_edit_vertical_guides_": [ 128.0, 304.0, 120.0, 520.0, 336.0, 512.0, 312.0, 328.0, 146.0 ]
-}
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_right = 640.0
-margin_bottom = 480.0
-rect_scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 2 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+offset_right = 640.0
+offset_bottom = 480.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2")
 
-[node name="Main Button Shadows" type="Panel" parent="."]
-self_modulate = Color( 1, 1, 1, 0 )
-margin_left = 234.0
-margin_top = 204.0
-margin_right = 626.0
-margin_bottom = 475.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="Main Button Shadows" type="VBoxContainer" parent="."]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 232.0
+offset_top = 200.0
+offset_right = 624.0
+offset_bottom = 478.0
+theme_override_constants/separation = 9
 
 [node name="Label" type="Label" parent="Main Button Shadows"]
-self_modulate = Color( 0, 0, 0, 0.533333 )
-margin_left = 8.0
-margin_right = 388.0
-margin_bottom = 45.0
-custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
-custom_fonts/font = SubResource( 3 )
+self_modulate = Color(0, 0, 0, 0.533333)
+layout_mode = 2
 text = "PLAY REDGUARD"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+label_settings = ExtResource("2_tu6kg")
+horizontal_alignment = 2
 
 [node name="Label2" type="Label" parent="Main Button Shadows"]
-self_modulate = Color( 0, 0, 0, 0.533333 )
-margin_left = 8.0
-margin_top = 56.0
-margin_right = 388.0
-margin_bottom = 90.0
-custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
-custom_fonts/font = SubResource( 4 )
+self_modulate = Color(0, 0, 0, 0.533333)
+layout_mode = 2
 text = "GAME OPTIONS"
-align = 2
-__meta__ = {
-"_edit_use_anchors_": false
-}
+label_settings = ExtResource("3_in2np")
+horizontal_alignment = 2
 
 [node name="Label3" type="Label" parent="Main Button Shadows"]
-self_modulate = Color( 0, 0, 0, 0.533333 )
-margin_left = 8.0
-margin_top = 99.0
-margin_right = 388.0
-margin_bottom = 133.0
-custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
-custom_fonts/font = SubResource( 4 )
+self_modulate = Color(0, 0, 0, 0.533333)
+layout_mode = 2
 text = "TECHNICAL SUPPORT"
-align = 2
-__meta__ = {
-"_edit_use_anchors_": false
-}
+label_settings = ExtResource("3_in2np")
+horizontal_alignment = 2
 
 [node name="Label4" type="Label" parent="Main Button Shadows"]
-self_modulate = Color( 0, 0, 0, 0.533333 )
-margin_left = 8.0
-margin_top = 143.0
-margin_right = 388.0
-margin_bottom = 177.0
-custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
-custom_fonts/font = SubResource( 4 )
+self_modulate = Color(0, 0, 0, 0.533333)
+layout_mode = 2
 text = "WWW.BETHSOFT.COM"
-align = 2
-__meta__ = {
-"_edit_use_anchors_": false
-}
+label_settings = ExtResource("3_in2np")
+horizontal_alignment = 2
 
 [node name="Label5" type="Label" parent="Main Button Shadows"]
-self_modulate = Color( 0, 0, 0, 0.533333 )
-margin_left = 8.0
-margin_top = 187.0
-margin_right = 388.0
-margin_bottom = 221.0
-custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
-custom_fonts/font = SubResource( 4 )
+self_modulate = Color(0, 0, 0, 0.533333)
+layout_mode = 2
 text = "UNINSTALL"
-align = 2
-__meta__ = {
-"_edit_use_anchors_": false
-}
+label_settings = ExtResource("3_in2np")
+horizontal_alignment = 2
 
 [node name="Label6" type="Label" parent="Main Button Shadows"]
-self_modulate = Color( 0, 0, 0, 0.533333 )
-margin_left = 8.0
-margin_top = 231.0
-margin_right = 388.0
-margin_bottom = 265.0
-custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
-custom_fonts/font = SubResource( 4 )
+self_modulate = Color(0, 0, 0, 0.533333)
+layout_mode = 2
 text = "QUIT"
-align = 2
-__meta__ = {
-"_edit_use_anchors_": false
-}
+label_settings = ExtResource("3_in2np")
+horizontal_alignment = 2
 
-[node name="Main Buttons" type="GridContainer" parent="."]
-margin_left = 240.0
-margin_top = 200.0
-margin_right = 632.0
-margin_bottom = 488.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="Main Buttons" type="VBoxContainer" parent="."]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 235.0
+offset_top = 194.0
+offset_right = 627.0
+offset_bottom = 477.0
+theme_override_constants/separation = 4
 
 [node name="Play Redguard" type="Button" parent="Main Buttons"]
-margin_right = 392.0
-margin_bottom = 51.0
+layout_mode = 2
 focus_mode = 0
-custom_colors/font_color = Color( 0.882353, 0, 0, 1 )
-custom_colors/font_color_hover = Color( 0.937255, 0.517647, 0.176471, 1 )
-custom_colors/font_color_pressed = Color( 0.54902, 0.152941, 0.152941, 1 )
-custom_fonts/font = SubResource( 1 )
-enabled_focus_mode = 0
+theme = ExtResource("4_xv85j")
 text = "PLAY REDGUARD"
 flat = true
-align = 2
-script = ExtResource( 19 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+alignment = 2
+script = ExtResource("19")
 
 [node name="Game Options" type="Button" parent="Main Buttons"]
-margin_top = 55.0
-margin_right = 392.0
-margin_bottom = 95.0
-rect_pivot_offset = Vector2( 0.043, 0 )
+layout_mode = 2
 focus_mode = 0
-custom_colors/font_color = Color( 0.882353, 0, 0, 1 )
-custom_colors/font_color_hover = Color( 0.937255, 0.517647, 0.176471, 1 )
-custom_colors/font_color_pressed = Color( 0.54902, 0.152941, 0.152941, 1 )
-custom_fonts/font = SubResource( 2 )
-enabled_focus_mode = 0
+theme = ExtResource("3_puetd")
 text = "GAME OPTIONS"
 flat = true
-align = 2
-script = ExtResource( 8 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-windowPath = NodePath("../../WindowDialog")
+alignment = 2
+script = ExtResource("8")
+windowPath = NodePath("../../OptionsWindowPopUp")
 
 [node name="Technical Support" type="Button" parent="Main Buttons"]
-margin_top = 99.0
-margin_right = 392.0
-margin_bottom = 139.0
+layout_mode = 2
 focus_mode = 0
-custom_colors/font_color = Color( 0.882353, 0, 0, 1 )
-custom_colors/font_color_hover = Color( 0.937255, 0.517647, 0.176471, 1 )
-custom_colors/font_color_pressed = Color( 0.54902, 0.152941, 0.152941, 1 )
-custom_fonts/font = SubResource( 2 )
-enabled_focus_mode = 0
+theme = ExtResource("3_puetd")
 text = "TECHNICAL SUPPORT"
 flat = true
-align = 2
-__meta__ = {
-"_edit_use_anchors_": false
-}
+alignment = 2
 
 [node name="Bethsoft" type="Button" parent="Main Buttons"]
-margin_top = 143.0
-margin_right = 392.0
-margin_bottom = 183.0
+layout_mode = 2
 focus_mode = 0
-custom_colors/font_color = Color( 0.882353, 0, 0, 1 )
-custom_colors/font_color_hover = Color( 0.937255, 0.517647, 0.176471, 1 )
-custom_colors/font_color_pressed = Color( 0.54902, 0.152941, 0.152941, 1 )
-custom_fonts/font = SubResource( 2 )
-enabled_focus_mode = 0
+theme = ExtResource("3_puetd")
 text = "WWW.BETHSOFT.COM"
 flat = true
-align = 2
-__meta__ = {
-"_edit_use_anchors_": false
-}
+alignment = 2
 
 [node name="Uninstall" type="Button" parent="Main Buttons"]
-margin_top = 187.0
-margin_right = 392.0
-margin_bottom = 227.0
+layout_mode = 2
 focus_mode = 0
-custom_colors/font_color = Color( 0.882353, 0, 0, 1 )
-custom_colors/font_color_hover = Color( 0.937255, 0.517647, 0.176471, 1 )
-custom_colors/font_color_pressed = Color( 0.54902, 0.152941, 0.152941, 1 )
-custom_fonts/font = SubResource( 2 )
-enabled_focus_mode = 0
+theme = ExtResource("3_puetd")
 text = "UNINSTALL"
 flat = true
-align = 2
-__meta__ = {
-"_edit_use_anchors_": false
-}
+alignment = 2
 
 [node name="Quit" type="Button" parent="Main Buttons"]
-margin_top = 231.0
-margin_right = 392.0
-margin_bottom = 271.0
+layout_mode = 2
 focus_mode = 0
-custom_colors/font_color = Color( 0.882353, 0, 0, 1 )
-custom_colors/font_color_hover = Color( 0.937255, 0.517647, 0.176471, 1 )
-custom_colors/font_color_pressed = Color( 0.54902, 0.152941, 0.152941, 1 )
-custom_fonts/font = SubResource( 2 )
-enabled_focus_mode = 0
+theme = ExtResource("3_puetd")
 text = "QUIT"
 flat = true
-align = 2
-script = ExtResource( 20 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+alignment = 2
+script = ExtResource("20")
 
-[node name="WindowDialog" type="WindowDialog" parent="."]
-visible = true
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -216.0
-margin_top = -166.0
-margin_right = 216.0
-margin_bottom = 166.0
-theme = ExtResource( 25 )
-custom_styles/panel = SubResource( 17 )
-popup_exclusive = true
-window_title = "Redguard Unity Options"
-script = ExtResource( 28 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="OptionsWindowPopUp" type="PopupPanel" parent="."]
+unique_name_in_owner = true
+canvas_item_default_texture_filter = 0
+initial_position = 2
+size = Vector2i(487, 374)
+theme = ExtResource("8_on04f")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_swe2c")
 
-[node name="Close Window" type="TextureButton" parent="WindowDialog"]
-margin_left = 410.0
-margin_top = -16.0
-margin_right = 426.0
-margin_bottom = -2.0
-focus_mode = 0
-enabled_focus_mode = 0
-script = ExtResource( 39 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="OptionsWindow new" type="Control" parent="OptionsWindowPopUp"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 487.0
+offset_bottom = 374.0
 
-[node name="Display Panel" type="NinePatchRect" parent="WindowDialog"]
-material = SubResource( 21 )
-margin_left = 16.0
-margin_top = 16.0
-margin_right = 208.0
-margin_bottom = 120.0
-texture = ExtResource( 13 )
+[node name="ConfigManager" type="Node" parent="OptionsWindowPopUp/OptionsWindow new" node_paths=PackedStringArray("windowModeDropdown", "vsyncCheckbox", "limitFPSCheckbox", "maxFPSCheckbox", "antiAliasingCheckbox", "shadowsCheckbox", "musicSlider", "effectsSlider", "voicesSlider", "subtitlesCheckbox", "autodefendCheckbox", "redguardPathLineEdit")]
+unique_name_in_owner = true
+script = ExtResource("28")
+windowModeDropdown = NodePath("../Window/Window Contents Margin/Window Contents/Settings Area/Left Panel/Display/Display Options Margin/Display Options/Window Mode")
+vsyncCheckbox = NodePath("../Window/Window Contents Margin/Window Contents/Settings Area/Left Panel/Display/Display Options Margin/Display Options/VSync")
+limitFPSCheckbox = NodePath("../Window/Window Contents Margin/Window Contents/Settings Area/Left Panel/Display/Display Options Margin/Display Options/FPSLimit Parent/FPSLimit")
+maxFPSCheckbox = NodePath("../Window/Window Contents Margin/Window Contents/Settings Area/Left Panel/Display/Display Options Margin/Display Options/FPSLimit Parent/maxFPS")
+antiAliasingCheckbox = NodePath("../Window/Window Contents Margin/Window Contents/Settings Area/Left Panel/Graphics/Graphics Options Margin/Graphics Options/AntiAliasing")
+shadowsCheckbox = NodePath("../Window/Window Contents Margin/Window Contents/Settings Area/Left Panel/Graphics/Graphics Options Margin/Graphics Options/Shadows")
+musicSlider = NodePath("../Window/Window Contents Margin/Window Contents/Settings Area/Right Panel/Audio/Audio Options Margin/Audio Options/Music Volume Slider")
+effectsSlider = NodePath("../Window/Window Contents Margin/Window Contents/Settings Area/Right Panel/Audio/Audio Options Margin/Audio Options/Effects Volume Slider")
+voicesSlider = NodePath("../Window/Window Contents Margin/Window Contents/Settings Area/Right Panel/Audio/Audio Options Margin/Audio Options/Voices Volume Slider")
+subtitlesCheckbox = NodePath("../Window/Window Contents Margin/Window Contents/Settings Area/Right Panel/Gameplay/Gameplay Options Margin/Gameplay Options/Subtitles")
+autodefendCheckbox = NodePath("../Window/Window Contents Margin/Window Contents/Settings Area/Right Panel/Gameplay/Gameplay Options Margin/Gameplay Options/Auto-Defend")
+redguardPathLineEdit = NodePath("../Window/Window Contents Margin/Window Contents/Path bar/LineEdit")
+
+[node name="ConfigLoader" type="Node" parent="OptionsWindowPopUp/OptionsWindow new/ConfigManager"]
+unique_name_in_owner = true
+script = ExtResource("5_hm5qs")
+
+[node name="DefaultConfigLoader" type="Node" parent="OptionsWindowPopUp/OptionsWindow new/ConfigManager"]
+unique_name_in_owner = true
+script = ExtResource("5_1bv2j")
+
+[node name="ConfigSaver" type="Node" parent="OptionsWindowPopUp/OptionsWindow new/ConfigManager"]
+unique_name_in_owner = true
+script = ExtResource("7_tuk1d")
+
+[node name="ButtonSignalReceiver" type="Node" parent="OptionsWindowPopUp/OptionsWindow new/ConfigManager"]
+script = ExtResource("8_epfgc")
+
+[node name="DependencyManager" type="Node" parent="OptionsWindowPopUp/OptionsWindow new/ConfigManager"]
+unique_name_in_owner = true
+script = ExtResource("9_y500b")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="OptionsWindowPopUp/OptionsWindow new"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("8_on04f")
+texture = ExtResource("3_lyplw")
+patch_margin_left = 6
+patch_margin_top = 6
+patch_margin_right = 6
+patch_margin_bottom = 6
+metadata/_edit_use_anchors_ = true
+
+[node name="Window" type="VBoxContainer" parent="OptionsWindowPopUp/OptionsWindow new"]
+layout_mode = 0
+offset_right = 487.0
+offset_bottom = 374.0
+size_flags_horizontal = 4
+theme = ExtResource("8_on04f")
+
+[node name="Title Bar" type="MarginContainer" parent="OptionsWindowPopUp/OptionsWindow new/Window"]
+layout_mode = 2
+theme = SubResource("Theme_cmocx")
+
+[node name="Blue Background" type="NinePatchRect" parent="OptionsWindowPopUp/OptionsWindow new/Window/Title Bar"]
+layout_mode = 2
+texture = ExtResource("9")
+region_rect = Rect2(6, 7, 3, 11)
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="TitleAndClose" type="HBoxContainer" parent="OptionsWindowPopUp/OptionsWindow new/Window/Title Bar"]
+layout_mode = 2
+
+[node name="MarginContainer2" type="MarginContainer" parent="OptionsWindowPopUp/OptionsWindow new/Window/Title Bar/TitleAndClose"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = SubResource("Theme_q1g54")
+
+[node name="Redguard Options" type="Label" parent="OptionsWindowPopUp/OptionsWindow new/Window/Title Bar/TitleAndClose/MarginContainer2"]
+layout_mode = 2
+theme = SubResource("Theme_g05jl")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "Redguard Options"
+vertical_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="OptionsWindowPopUp/OptionsWindow new/Window/Title Bar/TitleAndClose"]
+layout_mode = 2
+
+[node name="Close Button" type="TextureButton" parent="OptionsWindowPopUp/OptionsWindow new/Window/Title Bar/TitleAndClose/MarginContainer"]
+layout_mode = 2
+texture_normal = ExtResource("4_add16")
+stretch_mode = 3
+script = ExtResource("39")
+
+[node name="Window Contents Margin" type="MarginContainer" parent="OptionsWindowPopUp/OptionsWindow new/Window"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+metadata/_edit_use_anchors_ = true
+
+[node name="Window Contents" type="VBoxContainer" parent="OptionsWindowPopUp/OptionsWindow new/Window/Window Contents Margin"]
+layout_mode = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Settings Area" type="HBoxContainer" parent="OptionsWindowPopUp/OptionsWindow new/Window/Window Contents Margin/Window Contents"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Left Panel" type="VBoxContainer" parent="OptionsWindowPopUp/OptionsWindow new/Window/Window Contents Margin/Window Contents/Settings Area"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Display" type="PanelContainer" parent="OptionsWindowPopUp/OptionsWindow new/Window/Window Contents Margin/Window Contents/Settings Area/Left Panel"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Display Background Margin" type="MarginContainer" parent="OptionsWindowPopUp/OptionsWindow new/Window/Window Contents Margin/Window Contents/Settings Area/Left Panel/Display"]
+layout_mode = 2
+theme_override_constants/margin_top = 11
+
+[node name="Background" type="NinePatchRect" parent="OptionsWindowPopUp/OptionsWindow new/Window/Window Contents Margin/Window Contents/Settings Area/Left Panel/Display/Display Background Margin"]
+material = SubResource("CanvasItemMaterial_mlega")
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("13")
 patch_margin_left = 3
 patch_margin_top = 3
 patch_margin_right = 3
 patch_margin_bottom = 3
-__meta__ = {
-"_edit_use_anchors_": true
-}
 
-[node name="Display header" type="Label" parent="WindowDialog/Display Panel"]
-margin_left = 7.94899
-margin_top = -9.18729
-margin_right = 55.0
-margin_bottom = 9.81271
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_fonts/font = ExtResource( 15 )
-custom_styles/normal = ExtResource( 37 )
-text = "Display"
-align = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="Display Options Margin" type="MarginContainer" parent="OptionsWindowPopUp/OptionsWindow new/Window/Window Contents Margin/Window Contents/Settings Area/Left Panel/Display"]
+layout_mode = 2
+theme_override_constants/margin_left = 7
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 7
+theme_override_constants/margin_bottom = 2
 
-[node name="useDesktop" type="Button" parent="WindowDialog/Display Panel"]
-margin_left = 8.0
-margin_top = 14.0
-margin_right = 160.0
-margin_bottom = 35.0
+[node name="Display Options" type="VBoxContainer" parent="OptionsWindowPopUp/OptionsWindow new/Window/Window Contents Margin/Window Contents/Settings Area/Left Panel/Display/Display Options Margin"]
+layout_mode = 2
+
+[node name="Display header" type="Label" parent="OptionsWindowPopUp/OptionsWindow new/Window/Window Contents Margin/Window Contents/Settings Area/Left Panel/Display/Display Options Margin/Display Options"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = " Display "
+vertical_alignment = 1
+
+[node name="Window Mode" type="OptionButton" parent="OptionsWindowPopUp/OptionsWindow new/Window/Window Contents Margin/Window Contents/Settings Area/Left Panel/Display/Display Options Margin/Display Options"]
+layout_mode = 2
 focus_mode = 0
-custom_colors/font_color_disabled = Color( 0.501961, 0.501961, 0.501961, 1 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
-custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
-custom_fonts/font = ExtResource( 15 )
-custom_styles/hover = ExtResource( 37 )
-custom_styles/pressed = ExtResource( 37 )
-custom_styles/focus = ExtResource( 37 )
-custom_styles/disabled = ExtResource( 37 )
-custom_styles/normal = ExtResource( 37 )
-toggle_mode = true
-enabled_focus_mode = 0
-text = "     Use Desktop Resolution"
-align = 0
-script = ExtResource( 32 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-section = "Display"
-value = "useDesktopResolution"
-
-[node name="useDesktop_check" type="TextureButton" parent="WindowDialog/Display Panel/useDesktop"]
-margin_top = 4.0
-margin_right = 13.0
-margin_bottom = 17.0
-focus_mode = 0
-mouse_filter = 2
-toggle_mode = true
-enabled_focus_mode = 0
-texture_normal = ExtResource( 23 )
-texture_pressed = ExtResource( 10 )
-texture_disabled = ExtResource( 11 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Resolutions" type="OptionButton" parent="WindowDialog/Display Panel"]
-anchor_left = -0.00520833
-anchor_right = -0.00520833
-anchor_bottom = 0.0192308
-margin_left = 8.0
-margin_top = 40.0
-margin_right = 185.0
-margin_bottom = 60.0
-focus_mode = 0
-theme = ExtResource( 25 )
-custom_colors/font_color_disabled = Color( 0.6, 0.6, 0.6, 1 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
-custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
-custom_fonts/font = ExtResource( 15 )
-custom_icons/arrow = ExtResource( 16 )
-custom_styles/hover = ExtResource( 14 )
-custom_styles/pressed = ExtResource( 14 )
-custom_styles/focus = ExtResource( 14 )
-custom_styles/disabled = ExtResource( 34 )
-custom_styles/normal = ExtResource( 14 )
-enabled_focus_mode = 0
-text = "640x480 (4:3)"
-script = ExtResource( 31 )
-__meta__ = {
-"_edit_use_anchors_": true
-}
-
-[node name="Window Mode" type="OptionButton" parent="WindowDialog/Display Panel"]
-margin_left = 8.0
-margin_top = 72.0
-margin_right = 184.0
-margin_bottom = 94.0
-focus_mode = 0
-theme = ExtResource( 25 )
-custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
-custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
-custom_fonts/font = ExtResource( 15 )
-custom_icons/arrow = ExtResource( 16 )
-custom_styles/hover = ExtResource( 14 )
-custom_styles/pressed = ExtResource( 14 )
-custom_styles/focus = ExtResource( 14 )
-custom_styles/disabled = ExtResource( 14 )
-custom_styles/normal = ExtResource( 14 )
-enabled_focus_mode = 0
-text = "Fullscreen"
-items = [ "Fullscreen", null, false, 0, null, "Borderless Window", null, false, 1, null, "Window", null, false, 2, null ]
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_styles/focus = ExtResource("12_05xnm")
+theme_override_styles/normal = ExtResource("12_05xnm")
+theme_override_styles/hover = ExtResource("12_05xnm")
+theme_override_styles/pressed = ExtResource("12_05xnm")
+theme_override_styles/disabled = ExtResource("12_05xnm")
+item_count = 4
 selected = 0
-script = ExtResource( 12 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-section = "Display"
-value = "windowMode"
+popup/item_0/text = "ExclusiveFullScreen"
+popup/item_0/id = 0
+popup/item_1/text = "FullScreenWindow"
+popup/item_1/id = 1
+popup/item_2/text = "MaximizedWindow"
+popup/item_2/id = 2
+popup/item_3/text = "Windowed"
+popup/item_3/id = 3
 
-[node name="Audio Panel" type="NinePatchRect" parent="WindowDialog"]
-margin_left = 224.0
-margin_top = 16.0
-margin_right = 416.0
-margin_bottom = 152.0
-texture = ExtResource( 13 )
-patch_margin_left = 3
-patch_margin_top = 3
-patch_margin_right = 3
-patch_margin_bottom = 3
-__meta__ = {
-"_edit_use_anchors_": true
-}
+[node name="OptionButton" type="OptionButton" parent="OptionsWindowPopUp/OptionsWindow new/Window/Window Contents Margin/Window Contents/Settings Area/Left Panel/Display/Display Options Margin/Display Options"]
+layout_mode = 2
+item_count = 2
+selected = 0
+popup/item_0/text = "A"
+popup/item_0/id = 0
+popup/item_1/text = "B"
+popup/item_1/id = 1
 
-[node name="Label" type="Label" parent="WindowDialog/Audio Panel"]
-margin_left = 8.0
-margin_top = -9.18729
-margin_right = 50.0
-margin_bottom = 9.81271
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_fonts/font = ExtResource( 15 )
-custom_styles/normal = ExtResource( 37 )
-text = "Audio"
-align = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Music Slider" type="HSlider" parent="WindowDialog/Audio Panel"]
-margin_left = 8.0
-margin_top = 32.0
-margin_right = 184.0
-margin_bottom = 56.0
+[node name="VSync" type="CheckBox" parent="OptionsWindowPopUp/OptionsWindow new/Window/Window Contents Margin/Window Contents/Settings Area/Left Panel/Display/Display Options Margin/Display Options"]
+layout_mode = 2
 focus_mode = 0
-custom_icons/grabber_highlight = ExtResource( 22 )
-custom_icons/grabber = ExtResource( 22 )
-custom_styles/slider = SubResource( 9 )
-max_value = 1.0
-step = 0.01
-script = ExtResource( 38 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-section = "Audio"
-configValue = "music"
+theme_override_constants/check_v_offset = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_xgv7d")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_6lonk")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_h1inq")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_xw2vr")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_aaf83")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_gqn3f")
+text = "V-Sync"
 
-[node name="Music" type="Label" parent="WindowDialog/Audio Panel/Music Slider"]
-margin_top = -16.4407
-margin_right = 37.0
-margin_bottom = 0.559311
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_fonts/font = ExtResource( 15 )
-custom_styles/normal = ExtResource( 37 )
-text = "Music"
-align = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="FPSLimit Parent" type="HBoxContainer" parent="OptionsWindowPopUp/OptionsWindow new/Window/Window Contents Margin/Window Contents/Settings Area/Left Panel/Display/Display Options Margin/Display Options"]
+layout_mode = 2
 
-[node name="Effects Slider" type="HSlider" parent="WindowDialog/Audio Panel"]
-margin_left = 8.0
-margin_top = 71.0
-margin_right = 184.0
-margin_bottom = 95.0
+[node name="FPSLimit" type="CheckBox" parent="OptionsWindowPopUp/OptionsWindow new/Window/Window Contents Margin/Window Contents/Settings Area/Left Panel/Display/Display Options Margin/Display Options/FPSLimit Parent"]
+layout_mode = 2
 focus_mode = 0
-custom_icons/grabber_highlight = ExtResource( 22 )
-custom_icons/grabber = ExtResource( 22 )
-custom_styles/slider = SubResource( 9 )
-max_value = 1.0
-step = 0.01
-script = ExtResource( 38 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-section = "Audio"
-configValue = "effects"
+theme_override_constants/check_v_offset = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_xgv7d")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_6lonk")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_h1inq")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_xw2vr")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_aaf83")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_gqn3f")
+text = "Frame Rate Limit"
 
-[node name="Effects" type="Label" parent="WindowDialog/Audio Panel/Effects Slider"]
-margin_top = -16.4407
-margin_right = 37.0
-margin_bottom = 0.559311
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_fonts/font = ExtResource( 15 )
-custom_styles/normal = ExtResource( 37 )
-text = "Effects"
-align = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="Spacer" type="Control" parent="OptionsWindowPopUp/OptionsWindow new/Window/Window Contents Margin/Window Contents/Settings Area/Left Panel/Display/Display Options Margin/Display Options/FPSLimit Parent"]
+layout_mode = 2
+size_flags_horizontal = 3
 
-[node name="Voices Slider" type="HSlider" parent="WindowDialog/Audio Panel"]
-margin_left = 8.0
-margin_top = 109.0
-margin_right = 184.0
-margin_bottom = 133.0
-focus_mode = 0
-custom_icons/grabber_highlight = ExtResource( 22 )
-custom_icons/grabber = ExtResource( 22 )
-custom_styles/slider = SubResource( 9 )
-max_value = 1.0
-step = 0.01
-script = ExtResource( 38 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-section = "Audio"
-configValue = "voices"
-
-[node name="Voices" type="Label" parent="WindowDialog/Audio Panel/Voices Slider"]
-margin_top = -16.4407
-margin_right = 37.0
-margin_bottom = 0.559311
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_fonts/font = ExtResource( 15 )
-custom_styles/normal = ExtResource( 37 )
-text = "Voices"
-align = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Enhancements Panel" type="NinePatchRect" parent="WindowDialog"]
-material = SubResource( 22 )
-margin_left = 16.0
-margin_top = 136.0
-margin_right = 208.0
-margin_bottom = 264.0
-texture = ExtResource( 13 )
-patch_margin_left = 3
-patch_margin_top = 3
-patch_margin_right = 3
-patch_margin_bottom = 3
-__meta__ = {
-"_edit_use_anchors_": true
-}
-
-[node name="Enhancements" type="Label" parent="WindowDialog/Enhancements Panel"]
-margin_left = 8.0
-margin_top = -8.0
-margin_right = 98.0
-margin_bottom = 9.0
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_fonts/font = ExtResource( 15 )
-custom_styles/normal = ExtResource( 37 )
-text = "Enhancements"
-align = 1
-__meta__ = {
-"_edit_use_anchors_": true
-}
-
-[node name="vsync" type="Button" parent="WindowDialog/Enhancements Panel"]
-margin_left = 8.0
-margin_top = 14.0
-margin_right = 142.0
-margin_bottom = 35.0
-focus_mode = 0
-custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
-custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
-custom_fonts/font = ExtResource( 15 )
-custom_styles/hover = ExtResource( 37 )
-custom_styles/pressed = ExtResource( 37 )
-custom_styles/focus = ExtResource( 37 )
-custom_styles/disabled = ExtResource( 37 )
-custom_styles/normal = ExtResource( 37 )
-toggle_mode = true
-enabled_focus_mode = 0
-text = "     V-Sync"
-align = 0
-script = ExtResource( 35 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-section = "Enhancements"
-value = "vsync"
-
-[node name="vsync_check" type="TextureButton" parent="WindowDialog/Enhancements Panel/vsync"]
-margin_top = 4.0
-margin_right = 13.0
-margin_bottom = 17.0
-focus_mode = 0
-mouse_filter = 2
-toggle_mode = true
-enabled_focus_mode = 0
-texture_normal = ExtResource( 23 )
-texture_pressed = ExtResource( 10 )
-texture_disabled = ExtResource( 11 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="FPS Limit" type="Button" parent="WindowDialog/Enhancements Panel"]
-margin_left = 8.0
-margin_top = 38.0
-margin_right = 120.0
-margin_bottom = 59.0
-focus_mode = 0
-custom_colors/font_color_disabled = Color( 0.501961, 0.501961, 0.501961, 1 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
-custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
-custom_fonts/font = ExtResource( 15 )
-custom_styles/hover = SubResource( 23 )
-custom_styles/pressed = SubResource( 24 )
-custom_styles/disabled = SubResource( 25 )
-custom_styles/normal = SubResource( 26 )
-toggle_mode = true
-enabled_focus_mode = 0
-text = "      Frame Rate Limit"
-align = 0
-script = ExtResource( 29 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-section = "Enhancements"
-value = "limitFPS"
-
-[node name="FPSLimit_check" type="TextureButton" parent="WindowDialog/Enhancements Panel/FPS Limit"]
-margin_top = 4.0
-margin_right = 13.0
-margin_bottom = 17.0
-focus_mode = 0
-mouse_filter = 2
-toggle_mode = true
-enabled_focus_mode = 0
-texture_normal = ExtResource( 23 )
-texture_pressed = ExtResource( 10 )
-texture_disabled = ExtResource( 11 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="maxFPS" type="SpinBox" parent="WindowDialog/Enhancements Panel/FPS Limit"]
-margin_left = 127.0
-margin_top = 1.0
-margin_right = 176.0
-margin_bottom = 20.0
-theme = ExtResource( 25 )
-custom_icons/updown = ExtResource( 18 )
-max_value = 1000.0
+[node name="maxFPS" type="SpinBox" parent="OptionsWindowPopUp/OptionsWindow new/Window/Window Contents Margin/Window Contents/Settings Area/Left Panel/Display/Display Options Margin/Display Options/FPSLimit Parent"]
+layout_mode = 2
+theme_override_icons/updown = ExtResource("17_q4gb4")
+value = 55.0
 rounded = true
-script = ExtResource( 17 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-section = "Enhancements"
-configValue = "maxFPS"
 
-[node name="AA" type="Button" parent="WindowDialog/Enhancements Panel"]
-margin_left = 8.0
-margin_top = 62.0
-margin_right = 142.0
-margin_bottom = 83.0
-focus_mode = 0
-custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
-custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
-custom_fonts/font = ExtResource( 15 )
-custom_styles/hover = ExtResource( 37 )
-custom_styles/pressed = ExtResource( 37 )
-custom_styles/focus = ExtResource( 37 )
-custom_styles/disabled = ExtResource( 37 )
-custom_styles/normal = ExtResource( 37 )
-toggle_mode = true
-enabled_focus_mode = 0
-text = "     Anti-Aliasing (FXAA)"
-script = ExtResource( 36 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-section = "Enhancements"
-value = "AA"
+[node name="Graphics" type="PanelContainer" parent="OptionsWindowPopUp/OptionsWindow new/Window/Window Contents Margin/Window Contents/Settings Area/Left Panel"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 
-[node name="AA_check" type="TextureButton" parent="WindowDialog/Enhancements Panel/AA"]
-margin_top = 4.0
-margin_right = 13.0
-margin_bottom = 17.0
-focus_mode = 0
-mouse_filter = 2
-toggle_mode = true
-enabled_focus_mode = 0
-texture_normal = ExtResource( 23 )
-texture_pressed = ExtResource( 10 )
-texture_disabled = ExtResource( 11 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="Graphics Background Margin" type="MarginContainer" parent="OptionsWindowPopUp/OptionsWindow new/Window/Window Contents Margin/Window Contents/Settings Area/Left Panel/Graphics"]
+layout_mode = 2
+theme_override_constants/margin_top = 11
 
-[node name="shadows" type="Button" parent="WindowDialog/Enhancements Panel"]
-margin_left = 8.0
-margin_top = 86.0
-margin_right = 142.0
-margin_bottom = 107.0
-focus_mode = 0
-custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
-custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
-custom_fonts/font = ExtResource( 15 )
-custom_styles/hover = ExtResource( 37 )
-custom_styles/pressed = ExtResource( 37 )
-custom_styles/focus = ExtResource( 37 )
-custom_styles/disabled = ExtResource( 37 )
-custom_styles/normal = ExtResource( 37 )
-toggle_mode = true
-enabled_focus_mode = 0
-text = "     Shadows"
-align = 0
-script = ExtResource( 36 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-section = "Enhancements"
-value = "shadows"
-
-[node name="shadows_check" type="TextureButton" parent="WindowDialog/Enhancements Panel/shadows"]
-margin_top = 4.0
-margin_right = 13.0
-margin_bottom = 17.0
-focus_mode = 0
-mouse_filter = 2
-toggle_mode = true
-enabled_focus_mode = 0
-texture_normal = ExtResource( 23 )
-texture_pressed = ExtResource( 10 )
-texture_disabled = ExtResource( 11 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Gameplay" type="NinePatchRect" parent="WindowDialog"]
-margin_left = 224.0
-margin_top = 168.0
-margin_right = 416.0
-margin_bottom = 262.0
-texture = ExtResource( 13 )
+[node name="Background" type="NinePatchRect" parent="OptionsWindowPopUp/OptionsWindow new/Window/Window Contents Margin/Window Contents/Settings Area/Left Panel/Graphics/Graphics Background Margin"]
+material = SubResource("CanvasItemMaterial_mlega")
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("13")
 patch_margin_left = 3
 patch_margin_top = 3
 patch_margin_right = 3
 patch_margin_bottom = 3
-__meta__ = {
-"_edit_use_anchors_": true
-}
 
-[node name="Gameplay" type="Label" parent="WindowDialog/Gameplay"]
-margin_left = 8.0
-margin_top = -9.0
-margin_right = 75.0
-margin_bottom = 10.0
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_fonts/font = ExtResource( 15 )
-custom_styles/normal = ExtResource( 37 )
-text = "Gameplay"
-align = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="Graphics Options Margin" type="MarginContainer" parent="OptionsWindowPopUp/OptionsWindow new/Window/Window Contents Margin/Window Contents/Settings Area/Left Panel/Graphics"]
+layout_mode = 2
+theme_override_constants/margin_left = 7
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 7
+theme_override_constants/margin_bottom = 2
 
-[node name="Subtitles" type="Button" parent="WindowDialog/Gameplay"]
-margin_left = 8.0
-margin_top = 14.0
-margin_right = 142.0
-margin_bottom = 35.0
+[node name="Graphics Options" type="VBoxContainer" parent="OptionsWindowPopUp/OptionsWindow new/Window/Window Contents Margin/Window Contents/Settings Area/Left Panel/Graphics/Graphics Options Margin"]
+layout_mode = 2
+
+[node name="Graphics header" type="Label" parent="OptionsWindowPopUp/OptionsWindow new/Window/Window Contents Margin/Window Contents/Settings Area/Left Panel/Graphics/Graphics Options Margin/Graphics Options"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = " Graphics "
+vertical_alignment = 1
+
+[node name="AntiAliasing" type="CheckBox" parent="OptionsWindowPopUp/OptionsWindow new/Window/Window Contents Margin/Window Contents/Settings Area/Left Panel/Graphics/Graphics Options Margin/Graphics Options"]
+layout_mode = 2
 focus_mode = 0
-custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
-custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
-custom_fonts/font = ExtResource( 15 )
-custom_styles/hover = ExtResource( 37 )
-custom_styles/pressed = ExtResource( 37 )
-custom_styles/focus = ExtResource( 37 )
-custom_styles/disabled = ExtResource( 37 )
-custom_styles/normal = ExtResource( 37 )
-toggle_mode = true
-enabled_focus_mode = 0
-text = "     Subtitles"
-align = 0
-script = ExtResource( 36 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-section = "Gameplay"
-value = "subtitles"
+theme_override_constants/check_v_offset = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_xgv7d")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_6lonk")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_h1inq")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_xw2vr")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_aaf83")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_gqn3f")
+text = "Anti-Aliasing (FXAA)"
 
-[node name="Subtitles_check" type="TextureButton" parent="WindowDialog/Gameplay/Subtitles"]
-margin_top = 4.0
-margin_right = 13.0
-margin_bottom = 17.0
+[node name="Shadows" type="CheckBox" parent="OptionsWindowPopUp/OptionsWindow new/Window/Window Contents Margin/Window Contents/Settings Area/Left Panel/Graphics/Graphics Options Margin/Graphics Options"]
+layout_mode = 2
 focus_mode = 0
-toggle_mode = true
-enabled_focus_mode = 0
-texture_normal = ExtResource( 23 )
-texture_pressed = ExtResource( 10 )
-texture_disabled = ExtResource( 11 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+theme_override_constants/check_v_offset = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_xgv7d")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_6lonk")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_h1inq")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_xw2vr")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_aaf83")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_gqn3f")
+text = "Shadows"
 
-[node name="Auto-Defend" type="Button" parent="WindowDialog/Gameplay"]
-margin_left = 8.0
-margin_top = 40.0
-margin_right = 142.0
-margin_bottom = 61.0
+[node name="Right Panel" type="VBoxContainer" parent="OptionsWindowPopUp/OptionsWindow new/Window/Window Contents Margin/Window Contents/Settings Area"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Audio" type="PanelContainer" parent="OptionsWindowPopUp/OptionsWindow new/Window/Window Contents Margin/Window Contents/Settings Area/Right Panel"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Audio Background Margin" type="MarginContainer" parent="OptionsWindowPopUp/OptionsWindow new/Window/Window Contents Margin/Window Contents/Settings Area/Right Panel/Audio"]
+layout_mode = 2
+theme_override_constants/margin_top = 11
+
+[node name="Background" type="NinePatchRect" parent="OptionsWindowPopUp/OptionsWindow new/Window/Window Contents Margin/Window Contents/Settings Area/Right Panel/Audio/Audio Background Margin"]
+material = SubResource("CanvasItemMaterial_mlega")
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("13")
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+
+[node name="Audio Options Margin" type="MarginContainer" parent="OptionsWindowPopUp/OptionsWindow new/Window/Window Contents Margin/Window Contents/Settings Area/Right Panel/Audio"]
+layout_mode = 2
+theme_override_constants/margin_left = 7
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 7
+theme_override_constants/margin_bottom = 2
+
+[node name="Audio Options" type="VBoxContainer" parent="OptionsWindowPopUp/OptionsWindow new/Window/Window Contents Margin/Window Contents/Settings Area/Right Panel/Audio/Audio Options Margin"]
+layout_mode = 2
+
+[node name="Audio header" type="Label" parent="OptionsWindowPopUp/OptionsWindow new/Window/Window Contents Margin/Window Contents/Settings Area/Right Panel/Audio/Audio Options Margin/Audio Options"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = " Audio "
+vertical_alignment = 1
+
+[node name="Music" type="Label" parent="OptionsWindowPopUp/OptionsWindow new/Window/Window Contents Margin/Window Contents/Settings Area/Right Panel/Audio/Audio Options Margin/Audio Options"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Music"
+vertical_alignment = 1
+
+[node name="Music Volume Slider" type="HSlider" parent="OptionsWindowPopUp/OptionsWindow new/Window/Window Contents Margin/Window Contents/Settings Area/Right Panel/Audio/Audio Options Margin/Audio Options"]
+layout_mode = 2
+
+[node name="Effects" type="Label" parent="OptionsWindowPopUp/OptionsWindow new/Window/Window Contents Margin/Window Contents/Settings Area/Right Panel/Audio/Audio Options Margin/Audio Options"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Effects"
+vertical_alignment = 1
+
+[node name="Effects Volume Slider" type="HSlider" parent="OptionsWindowPopUp/OptionsWindow new/Window/Window Contents Margin/Window Contents/Settings Area/Right Panel/Audio/Audio Options Margin/Audio Options"]
+layout_mode = 2
+
+[node name="Voices" type="Label" parent="OptionsWindowPopUp/OptionsWindow new/Window/Window Contents Margin/Window Contents/Settings Area/Right Panel/Audio/Audio Options Margin/Audio Options"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Voices"
+vertical_alignment = 1
+
+[node name="Voices Volume Slider" type="HSlider" parent="OptionsWindowPopUp/OptionsWindow new/Window/Window Contents Margin/Window Contents/Settings Area/Right Panel/Audio/Audio Options Margin/Audio Options"]
+layout_mode = 2
+
+[node name="Gameplay" type="PanelContainer" parent="OptionsWindowPopUp/OptionsWindow new/Window/Window Contents Margin/Window Contents/Settings Area/Right Panel"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Gameplay Background Margin" type="MarginContainer" parent="OptionsWindowPopUp/OptionsWindow new/Window/Window Contents Margin/Window Contents/Settings Area/Right Panel/Gameplay"]
+layout_mode = 2
+theme_override_constants/margin_top = 11
+
+[node name="Background" type="NinePatchRect" parent="OptionsWindowPopUp/OptionsWindow new/Window/Window Contents Margin/Window Contents/Settings Area/Right Panel/Gameplay/Gameplay Background Margin"]
+material = SubResource("CanvasItemMaterial_mlega")
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("13")
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+
+[node name="Gameplay Options Margin" type="MarginContainer" parent="OptionsWindowPopUp/OptionsWindow new/Window/Window Contents Margin/Window Contents/Settings Area/Right Panel/Gameplay"]
+layout_mode = 2
+theme_override_constants/margin_left = 7
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 7
+theme_override_constants/margin_bottom = 2
+
+[node name="Gameplay Options" type="VBoxContainer" parent="OptionsWindowPopUp/OptionsWindow new/Window/Window Contents Margin/Window Contents/Settings Area/Right Panel/Gameplay/Gameplay Options Margin"]
+layout_mode = 2
+
+[node name="Gameplay header" type="Label" parent="OptionsWindowPopUp/OptionsWindow new/Window/Window Contents Margin/Window Contents/Settings Area/Right Panel/Gameplay/Gameplay Options Margin/Gameplay Options"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = " Gameplay "
+vertical_alignment = 1
+
+[node name="Subtitles" type="CheckBox" parent="OptionsWindowPopUp/OptionsWindow new/Window/Window Contents Margin/Window Contents/Settings Area/Right Panel/Gameplay/Gameplay Options Margin/Gameplay Options"]
+layout_mode = 2
 focus_mode = 0
-custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
-custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
-custom_fonts/font = ExtResource( 15 )
-custom_styles/hover = ExtResource( 37 )
-custom_styles/pressed = ExtResource( 37 )
-custom_styles/focus = ExtResource( 37 )
-custom_styles/disabled = ExtResource( 37 )
-custom_styles/normal = ExtResource( 37 )
-toggle_mode = true
-enabled_focus_mode = 0
-text = "     Auto-Defend"
-align = 0
-script = ExtResource( 36 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-section = "Gameplay"
-value = "autoDefend"
+theme_override_constants/check_v_offset = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_xgv7d")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_6lonk")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_h1inq")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_xw2vr")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_aaf83")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_gqn3f")
+text = "Subtitles"
 
-[node name="Auto-Defend_check" type="TextureButton" parent="WindowDialog/Gameplay/Auto-Defend"]
-margin_top = 4.0
-margin_right = 13.0
-margin_bottom = 17.0
+[node name="Auto-Defend" type="CheckBox" parent="OptionsWindowPopUp/OptionsWindow new/Window/Window Contents Margin/Window Contents/Settings Area/Right Panel/Gameplay/Gameplay Options Margin/Gameplay Options"]
+layout_mode = 2
 focus_mode = 0
-toggle_mode = true
-enabled_focus_mode = 0
-texture_normal = ExtResource( 23 )
-texture_pressed = ExtResource( 10 )
-texture_disabled = ExtResource( 11 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+theme_override_constants/check_v_offset = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_xgv7d")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_6lonk")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_h1inq")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_xw2vr")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_aaf83")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_gqn3f")
+text = "Auto-Defend"
 
-[node name="Modern Controls" type="Button" parent="WindowDialog/Gameplay"]
-margin_left = 8.0
-margin_top = 67.0
-margin_right = 142.0
-margin_bottom = 88.0
+[node name="Modern Controls" type="CheckBox" parent="OptionsWindowPopUp/OptionsWindow new/Window/Window Contents Margin/Window Contents/Settings Area/Right Panel/Gameplay/Gameplay Options Margin/Gameplay Options"]
+visible = false
+layout_mode = 2
 focus_mode = 0
-custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
-custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
-custom_fonts/font = ExtResource( 15 )
-custom_styles/hover = ExtResource( 37 )
-custom_styles/pressed = ExtResource( 37 )
-custom_styles/focus = ExtResource( 37 )
-custom_styles/disabled = ExtResource( 37 )
-custom_styles/normal = ExtResource( 37 )
-toggle_mode = true
-enabled_focus_mode = 0
-text = "     Modern Controls"
-align = 0
-script = ExtResource( 36 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-section = "Gameplay"
-value = "newControls"
+theme_override_constants/check_v_offset = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_xgv7d")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_6lonk")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_h1inq")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_xw2vr")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_aaf83")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_gqn3f")
+text = "Modern Controls"
 
-[node name="Modern Controls_check" type="TextureButton" parent="WindowDialog/Gameplay/Modern Controls"]
-margin_top = 4.0
-margin_right = 13.0
-margin_bottom = 17.0
-focus_mode = 0
-toggle_mode = true
-enabled_focus_mode = 0
-texture_normal = ExtResource( 23 )
-texture_pressed = ExtResource( 10 )
-texture_disabled = ExtResource( 11 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="Path bar" type="HBoxContainer" parent="OptionsWindowPopUp/OptionsWindow new/Window/Window Contents Margin/Window Contents" node_paths=PackedStringArray("fileDialog", "lineEdit")]
+layout_mode = 2
+theme_override_constants/separation = 7
+script = ExtResource("12_mqnbw")
+fileDialog = NodePath("../../../../../../NativeFileDialog")
+lineEdit = NodePath("LineEdit")
 
-[node name="Defaults" type="Button" parent="WindowDialog"]
-margin_left = 16.0
-margin_top = 303.0
-margin_right = 112.0
-margin_bottom = 326.0
-focus_mode = 0
-custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
-custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
-custom_fonts/font = ExtResource( 15 )
-custom_styles/hover = ExtResource( 30 )
-custom_styles/pressed = ExtResource( 24 )
-custom_styles/normal = ExtResource( 30 )
-enabled_focus_mode = 0
-text = "Defaults"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Save" type="Button" parent="WindowDialog"]
-margin_left = 320.0
-margin_top = 303.0
-margin_right = 416.0
-margin_bottom = 326.0
-focus_mode = 0
-custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
-custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
-custom_fonts/font = ExtResource( 15 )
-custom_styles/hover = ExtResource( 30 )
-custom_styles/pressed = ExtResource( 24 )
-custom_styles/normal = ExtResource( 30 )
-enabled_focus_mode = 0
-text = "Save"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Save & Quit" type="Button" parent="WindowDialog"]
-margin_left = 216.0
-margin_top = 303.0
-margin_right = 312.0
-margin_bottom = 326.0
-focus_mode = 0
-custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
-custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
-custom_fonts/font = ExtResource( 15 )
-custom_styles/hover = ExtResource( 30 )
-custom_styles/pressed = ExtResource( 24 )
-custom_styles/normal = ExtResource( 30 )
-enabled_focus_mode = 0
-text = "Save & Close"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="PathInput" type="LineEdit" parent="WindowDialog"]
-margin_left = 103.0
-margin_top = 272.0
-margin_right = 388.0
-margin_bottom = 296.0
-theme = ExtResource( 25 )
-custom_colors/selection_color = Color( 0, 0.470588, 0.843137, 1 )
-custom_colors/font_color_selected = Color( 1, 1, 1, 1 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_colors/font_color_uneditable = Color( 0, 0, 0, 1 )
-custom_fonts/font = ExtResource( 15 )
-custom_styles/normal = SubResource( 16 )
-placeholder_text = " The folder containing REDGUARD.EXE"
-caret_blink = true
-script = ExtResource( 27 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-section = "FilePaths"
-value = "Redguard"
-
-[node name="Label2" type="Label" parent="WindowDialog/PathInput"]
-margin_left = -87.0
-margin_right = -2.0
-margin_bottom = 24.0
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_fonts/font = ExtResource( 15 )
+[node name="Label" type="Label" parent="OptionsWindowPopUp/OptionsWindow new/Window/Window Contents Margin/Window Contents/Path bar"]
+layout_mode = 2
 text = "Redguard Path:"
-valign = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
+vertical_alignment = 1
 
-[node name="OpenDialog" type="Button" parent="WindowDialog/PathInput"]
-margin_left = 289.0
-margin_right = 313.0
-margin_bottom = 24.0
+[node name="LineEdit" type="LineEdit" parent="OptionsWindowPopUp/OptionsWindow new/Window/Window Contents Margin/Window Contents/Path bar"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_placeholder_color = Color(0.478431, 0.478431, 0.478431, 1)
+placeholder_text = " The folder containing REDGUARD.EXE"
+
+[node name="SelectPath" type="Button" parent="OptionsWindowPopUp/OptionsWindow new/Window/Window Contents Margin/Window Contents/Path bar"]
+layout_mode = 2
+text = " ... "
+
+[node name="Button Bar" type="HBoxContainer" parent="OptionsWindowPopUp/OptionsWindow new/Window/Window Contents Margin/Window Contents"]
+layout_mode = 2
+
+[node name="Defaults" type="Button" parent="OptionsWindowPopUp/OptionsWindow new/Window/Window Contents Margin/Window Contents/Button Bar"]
+custom_minimum_size = Vector2(96, 0)
+layout_mode = 2
 focus_mode = 0
-custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
-custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
-custom_fonts/font = ExtResource( 15 )
-custom_styles/hover = ExtResource( 30 )
-custom_styles/pressed = ExtResource( 24 )
-custom_styles/normal = ExtResource( 30 )
-text = "..."
-script = ExtResource( 33 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-fileWindowPath = NodePath("../../../FileDialog")
+text = "Defaults"
+
+[node name="Spacer" type="Control" parent="OptionsWindowPopUp/OptionsWindow new/Window/Window Contents Margin/Window Contents/Button Bar"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Cancel" type="Button" parent="OptionsWindowPopUp/OptionsWindow new/Window/Window Contents Margin/Window Contents/Button Bar"]
+custom_minimum_size = Vector2(96, 0)
+layout_mode = 2
+focus_mode = 0
+text = "Cancel"
+
+[node name="Ok" type="Button" parent="OptionsWindowPopUp/OptionsWindow new/Window/Window Contents Margin/Window Contents/Button Bar"]
+custom_minimum_size = Vector2(96, 23)
+layout_mode = 2
+focus_mode = 0
+text = "Ok"
+
+[node name="NativeFileDialog" type="NativeFileDialog" parent="."]
+title = "Open a Directory"
+file_mode = 2
+access = 2
+unique_name_in_owner = true
 
 [node name="FileDialog" type="FileDialog" parent="."]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -252.0
-margin_top = -172.5
-margin_right = 252.0
-margin_bottom = 172.5
-theme = ExtResource( 25 )
-window_title = "Verzeichnis wählen"
-resizable = true
+size = Vector2i(475, 162)
 mode = 2
 access = 2
-current_dir = "/"
-current_path = "/"
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Control" type="Control" parent="FileDialog"]
-margin_left = 8.0
-margin_top = 8.0
-margin_right = 496.0
-margin_bottom = 310.0
+layout_mode = 3
+anchors_preset = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 467.0
+offset_bottom = 113.0
 mouse_filter = 2
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Close Window2" type="TextureButton" parent="FileDialog/Control"]
-margin_left = 474.0
-margin_top = -24.0
-margin_right = 490.0
-margin_bottom = -10.0
-script = ExtResource( 39 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+layout_mode = 0
+offset_left = 474.0
+offset_top = -24.0
+offset_right = 490.0
+offset_bottom = -10.0
+script = ExtResource("39")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-pitch_scale = 1.3
-script = ExtResource( 3 )
-
-[node name="RandomAudioStreamPlayer" type="AudioStreamPlayer" parent="AudioStreamPlayer"]
-pitch_scale = 1.03
-script = ExtResource( 5 )
-samples = [ ExtResource( 4 ), ExtResource( 6 ), ExtResource( 7 ) ]
-random_strategy = 1
-
-[connection signal="mouse_entered" from="Main Buttons/Play Redguard" to="AudioStreamPlayer" method="_on_Play_Redguard_mouse_entered"]
-[connection signal="pressed" from="Main Buttons/Play Redguard" to="AudioStreamPlayer" method="_on_Play_Redguard_pressed"]
-[connection signal="mouse_entered" from="Main Buttons/Game Options" to="AudioStreamPlayer" method="_on_Game_Options_mouse_entered"]
-[connection signal="pressed" from="Main Buttons/Game Options" to="AudioStreamPlayer" method="_on_Game_Options_pressed"]
-[connection signal="mouse_entered" from="Main Buttons/Technical Support" to="AudioStreamPlayer" method="_on_Technical_Support_mouse_entered"]
-[connection signal="pressed" from="Main Buttons/Technical Support" to="AudioStreamPlayer" method="_on_Technical_Support_pressed"]
-[connection signal="mouse_entered" from="Main Buttons/Bethsoft" to="AudioStreamPlayer" method="_on_Bethsoft_mouse_entered"]
-[connection signal="pressed" from="Main Buttons/Bethsoft" to="AudioStreamPlayer" method="_on_Bethsoft_pressed"]
-[connection signal="mouse_entered" from="Main Buttons/Uninstall" to="AudioStreamPlayer" method="_on_Uninstall_mouse_entered"]
-[connection signal="mouse_entered" from="Main Buttons/Quit" to="AudioStreamPlayer" method="_on_Quit_mouse_entered"]
-[connection signal="pressed" from="Main Buttons/Quit" to="AudioStreamPlayer" method="_on_Quit_pressed"]
-[connection signal="loaded" from="WindowDialog" to="WindowDialog/Display Panel/useDesktop" method="_on_WindowDialog_loaded"]
-[connection signal="loaded" from="WindowDialog" to="WindowDialog/Display Panel/Resolutions" method="_on_WindowDialog_loaded"]
-[connection signal="loaded" from="WindowDialog" to="WindowDialog/Display Panel/Window Mode" method="_on_WindowDialog_loaded"]
-[connection signal="loaded" from="WindowDialog" to="WindowDialog/Audio Panel/Music Slider" method="_on_WindowDialog_loaded"]
-[connection signal="loaded" from="WindowDialog" to="WindowDialog/Audio Panel/Effects Slider" method="_on_WindowDialog_loaded"]
-[connection signal="loaded" from="WindowDialog" to="WindowDialog/Audio Panel/Voices Slider" method="_on_WindowDialog_loaded"]
-[connection signal="loaded" from="WindowDialog" to="WindowDialog/Enhancements Panel/vsync" method="_on_WindowDialog_loaded"]
-[connection signal="loaded" from="WindowDialog" to="WindowDialog/Enhancements Panel/FPS Limit" method="_on_WindowDialog_loaded"]
-[connection signal="loaded" from="WindowDialog" to="WindowDialog/Enhancements Panel/FPS Limit/maxFPS" method="_on_WindowDialog_loaded"]
-[connection signal="loaded" from="WindowDialog" to="WindowDialog/Enhancements Panel/AA" method="_on_WindowDialog_loaded"]
-[connection signal="loaded" from="WindowDialog" to="WindowDialog/Enhancements Panel/shadows" method="_on_WindowDialog_loaded"]
-[connection signal="loaded" from="WindowDialog" to="WindowDialog/Gameplay/Subtitles" method="_on_WindowDialog_loaded"]
-[connection signal="loaded" from="WindowDialog" to="WindowDialog/Gameplay/Auto-Defend" method="_on_WindowDialog_loaded"]
-[connection signal="loaded" from="WindowDialog" to="WindowDialog/Gameplay/Modern Controls" method="_on_WindowDialog_loaded"]
-[connection signal="toggled" from="WindowDialog/Display Panel/useDesktop" to="WindowDialog/Display Panel/Resolutions" method="_on_useDesktop_toggled"]
-[connection signal="item_selected" from="WindowDialog/Display Panel/Resolutions" to="WindowDialog/Display Panel/Resolutions" method="_on_Resolutions_item_selected"]
-[connection signal="item_selected" from="WindowDialog/Display Panel/Window Mode" to="WindowDialog/Display Panel/Window Mode" method="_on_Window_Mode_item_selected"]
-[connection signal="value_changed" from="WindowDialog/Audio Panel/Music Slider" to="WindowDialog/Audio Panel/Music Slider" method="_on_Music_Slider_value_changed"]
-[connection signal="value_changed" from="WindowDialog/Audio Panel/Effects Slider" to="WindowDialog/Audio Panel/Effects Slider" method="_on_Effects_Slider_value_changed"]
-[connection signal="value_changed" from="WindowDialog/Audio Panel/Voices Slider" to="WindowDialog/Audio Panel/Voices Slider" method="_on_Voices_Slider_value_changed"]
-[connection signal="value_changed" from="WindowDialog/Enhancements Panel/FPS Limit/maxFPS" to="WindowDialog/Enhancements Panel/FPS Limit/maxFPS" method="_on_maxFPS_value_changed"]
-[connection signal="pressed" from="WindowDialog/Defaults" to="WindowDialog" method="_on_Defaults_pressed"]
-[connection signal="pressed" from="WindowDialog/Save" to="WindowDialog" method="_on_Save_pressed"]
-[connection signal="pressed" from="WindowDialog/Save & Quit" to="WindowDialog" method="_on_Save__Quit_pressed"]
-[connection signal="text_changed" from="WindowDialog/PathInput" to="WindowDialog/PathInput" method="_on_LineEdit_text_changed"]
-[connection signal="dir_selected" from="FileDialog" to="WindowDialog/PathInput" method="_on_FileDialog_dir_selected"]
+[connection signal="about_to_popup" from="OptionsWindowPopUp" to="OptionsWindowPopUp/OptionsWindow new/ConfigManager" method="_on_options_window_pop_up_about_to_popup"]
+[connection signal="pressed" from="OptionsWindowPopUp/OptionsWindow new/Window/Window Contents Margin/Window Contents/Settings Area/Left Panel/Display/Display Options Margin/Display Options/VSync" to="OptionsWindowPopUp/OptionsWindow new/ConfigManager/ButtonSignalReceiver" method="_on_v_sync_pressed"]
+[connection signal="pressed" from="OptionsWindowPopUp/OptionsWindow new/Window/Window Contents Margin/Window Contents/Settings Area/Left Panel/Display/Display Options Margin/Display Options/FPSLimit Parent/FPSLimit" to="OptionsWindowPopUp/OptionsWindow new/ConfigManager/ButtonSignalReceiver" method="_on_fps_limit_pressed"]
+[connection signal="pressed" from="OptionsWindowPopUp/OptionsWindow new/Window/Window Contents Margin/Window Contents/Path bar/SelectPath" to="OptionsWindowPopUp/OptionsWindow new/Window/Window Contents Margin/Window Contents/Path bar" method="_on_select_path_pressed"]
+[connection signal="pressed" from="OptionsWindowPopUp/OptionsWindow new/Window/Window Contents Margin/Window Contents/Button Bar/Defaults" to="OptionsWindowPopUp/OptionsWindow new/ConfigManager/ButtonSignalReceiver" method="_on_defaults_pressed"]
+[connection signal="pressed" from="OptionsWindowPopUp/OptionsWindow new/Window/Window Contents Margin/Window Contents/Button Bar/Cancel" to="OptionsWindowPopUp/OptionsWindow new/ConfigManager/ButtonSignalReceiver" method="_on_cancel_pressed"]
+[connection signal="pressed" from="OptionsWindowPopUp/OptionsWindow new/Window/Window Contents Margin/Window Contents/Button Bar/Ok" to="OptionsWindowPopUp/OptionsWindow new/ConfigManager/ButtonSignalReceiver" method="_on_ok_pressed"]
+[connection signal="dir_selected" from="NativeFileDialog" to="OptionsWindowPopUp/OptionsWindow new/Window/Window Contents Margin/Window Contents/Path bar" method="_on_native_file_dialog_dir_selected"]

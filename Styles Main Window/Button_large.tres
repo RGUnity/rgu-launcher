@@ -1,0 +1,10 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://h5443ot80yao"]
+
+[ext_resource type="FontFile" uid="uid://dkfr54mufp871" path="res://Fonts/Androgyne_TB.otf" id="1_lcnbj"]
+
+[resource]
+default_font_size = 48
+Button/colors/font_color = Color(1, 0, 0, 1)
+Button/colors/font_outline_color = Color(0, 0, 0, 1)
+Button/constants/outline_size = 6
+Button/fonts/font = ExtResource("1_lcnbj")

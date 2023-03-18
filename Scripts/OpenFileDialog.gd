@@ -1,7 +1,23 @@
-extends Button
-export(NodePath) var fileWindowPath
-var fileWindow
+extends HBoxContainer
 
-func _pressed():
-	fileWindow = get_node(fileWindowPath)
-	fileWindow.popup_centered()
+# "NativeFileDialog" is from the Addon "NativeDialogs" by 98teg on GitHub
+# Link: https://github.com/98teg/NativeDialogs
+@export var fileDialog: NativeFileDialog
+@export var lineEdit: LineEdit
+
+
+# When the "..." button is pressed, open a file dialog 
+func _on_select_path_pressed():
+	fileDialog.show()
+
+
+# When that dialog returns a path, set it as the text for the lineEdit
+func _on_native_file_dialog_dir_selected(dir):
+
+	
+	# dirty workaround because the options window ... 
+	# ... currently hides itself if you click away, ...
+	# ... even if "Always on top" is enabled.
+	%OptionsWindowPopUp.popup_centered()
+	
+	lineEdit.text = dir

@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/RATTLE1.wav-89f44e5356c3b98d6f8b11f3242c0382.sample"
+type="AudioStreamWAV"
+uid="uid://c7qe7tgy8stp"
+path="res://.godot/imported/RATTLE1.wav-89f44e5356c3b98d6f8b11f3242c0382.sample"
 
 [deps]
 
 source_file="res://Sounds/RATTLE1.wav"
-dest_files=[ "res://.import/RATTLE1.wav-89f44e5356c3b98d6f8b11f3242c0382.sample" ]
+dest_files=["res://.godot/imported/RATTLE1.wav-89f44e5356c3b98d6f8b11f3242c0382.sample"]
 
 [params]
 
@@ -17,5 +18,7 @@ force/max_rate=false
 force/max_rate_hz=44100
 edit/trim=false
 edit/normalize=false
-edit/loop=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
 compress/mode=0

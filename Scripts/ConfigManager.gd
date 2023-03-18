@@ -1,67 +1,93 @@
-extends WindowDialog
+extends Node
+
+@export_group("Display Category")
+@export var windowModeDropdown: OptionButton
+@export var vsyncCheckbox: CheckBox
+@export var limitFPSCheckbox: CheckBox
+@export var maxFPSCheckbox: SpinBox
+
+@export_group("Graphics Category")
+@export var antiAliasingCheckbox: CheckBox
+@export var shadowsCheckbox: CheckBox
+
+@export_group("Audio Category")
+@export var musicSlider: Slider
+@export var effectsSlider: Slider
+@export var voicesSlider: Slider
+
+@export_group("Gameplay Category")
+@export var subtitlesCheckbox: CheckBox
+@export var autodefendCheckbox: CheckBox
+
+@export_group("")
+
+# PATH
+@export var redguardPathLineEdit: LineEdit
+
 
 var config = ConfigFile.new()
-var directory = Directory.new()
-#	Path for the template config file that gets copied if no config file exists
-var defaultPath = OS.get_executable_path().get_base_dir() + "/Config_Default.cfg"
-var defaultPathEditor = ProjectSettings.globalize_path("res://Config_Default.cfg")
-#	These crate the path for the new file in /LocalLow
-var drive = OS.get_environment("windir").rstrip("WINDOWS")
-var user = OS.get_environment("USERNAME")
-var path = drive + "/users/" + user + "/APPDATA/LOCALLOW/RGUnity/RedguardUnity/Config.cfg"
-signal loaded
-
-
 
 func _ready():
-	
-	#	Try to load the config file
-	var loadConfig = config.load(path)
-	
-	#	if the file exists, load it. If it is missing, create a new one.
-	if loadConfig == OK:
-		print ("Config loaded Successfully: ", path)
-	if loadConfig != OK:
-		print ("Failed to load config, trying to create new one here: ", path)
+	#	on start, make sure this window is hidden
+	if %OptionsWindowPopUp.visible:
+		%OptionsWindowPopUp.visible = false
 		
-		#	Check if we are running in Editor or Build, then load the available DefaultConfig
-		if OS.has_feature("editor"):
-			print("Running in Editor, looking for config here: ", defaultPathEditor)
-			directory.copy(defaultPathEditor, path)
-
-		#	Same thing, but in Build mode
-		else: 
-			print("Running as Build, looking for default config here: ", defaultPath)
-			directory.copy(defaultPathEditor, path)
-			
-		#	After the config file has been restored, finally load its data
-		config.load(path)
-
-		#	Now Add a timestamp to mark the creation date and load it again
-		var time = OS.get_datetime()
-		var timestamp = String(time.year)+"-"+String(time.month)+"-"+String(time.day)+ " "+String(time.hour) +":"+String(time.minute)+":"+String(time.second)
-		config.set_value("Info", "test", timestamp)
-		config.save(path)	
-		config.load(path)
-	emit_signal("loaded")
+func _on_options_window_pop_up_about_to_popup():
+	_load_config_and_set_values()
 
 
-#	Buttons signals: Load Defaults, Save & Close, Save
-
-func _on_Save_pressed():
-	config.save(path)
-	print("Config saved to ", path)
+func _load_config_and_set_values():
 	
-
-func _on_Save__Quit_pressed():
-	config.save(path)
-	print("Config saved to ", path)
-	.set_visible(false)
+	%ConfigLoader.load_config()
 	
+	# DISPLAY CATEGORY GETTERS
+	windowModeDropdown.selected = config.get_value("Display", "windowMode")
+	vsyncCheckbox.button_pressed = config.get_value("Display", "vsync")
+	limitFPSCheckbox.button_pressed = config.get_value("Display", "limitFPS")
+	maxFPSCheckbox.value = config.get_value("Display", "maxFPS")
+	
+	# GRAPHICS CATEGORY GETTERS
+	antiAliasingCheckbox.button_pressed = config.get_value("Graphics", "antiAliasing")
+	shadowsCheckbox.button_pressed = config.get_value("Graphics", "shadows")
+	
+	# AUDIO CATEGORY GETTERS
+	musicSlider.value = config.get_value("Audio", "music")
+	effectsSlider.value = config.get_value("Audio", "effects")
+	voicesSlider.value = config.get_value("Audio", "voices")
+	
+	# GAMEPLAY CATEGORY GETTERS
+	subtitlesCheckbox.button_pressed = config.get_value("Gameplay", "subtitles")
+	autodefendCheckbox.button_pressed = config.get_value("Gameplay", "autoDefend")
+	
+	# FILEPATHS CATEGORY GETTERS
+	redguardPathLineEdit.text = config.get_value("FilePaths", "redguardPath")
+	
+	%DependencyManager.update_vsync_dependencies()
+	%DependencyManager.update_fpslimit_dependencies()
 
-func _on_Defaults_pressed():
-	directory.copy(defaultPathEditor, path)
-	config.load(path)
-	print("Defaults restored")
-	global.emit_signal("reloadInterface")
 
+func set_values_and_save_config():
+	
+	# DISPLAY CATEGORY SETTERS
+	config.set_value("Display", "windowMode", windowModeDropdown.selected)
+	config.set_value("Display", "vsync", vsyncCheckbox.button_pressed)
+	config.set_value("Display", "limitFPS", limitFPSCheckbox.button_pressed)
+	config.set_value("Display", "maxFPS", maxFPSCheckbox.value)
+
+	# GRAPHICS CATEGORY SETTERS
+	config.set_value("Graphics", "antiAliasing", antiAliasingCheckbox.button_pressed)
+	config.set_value("Graphics", "shadows", shadowsCheckbox.button_pressed)
+	
+	# AUDIO CATEGORY SETTERS
+	config.set_value("Audio", "music", musicSlider.value)
+	config.set_value("Audio", "effects", effectsSlider.value)
+	config.set_value("Audio", "voices", voicesSlider.value)
+	
+	# GAMEPLAY CATEGORY SETTERS
+	config.set_value("Gameplay", "subtitles", subtitlesCheckbox.button_pressed)
+	config.set_value("Gameplay", "autoDefend", autodefendCheckbox.button_pressed)
+	
+	# FILEPATHS CATEGORY SETTERS
+	config.set_value("FilePaths", "redguardPath", redguardPathLineEdit.text)
+	
+	%ConfigSaver.save_config()

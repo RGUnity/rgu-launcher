@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/SCRAPE2.wav-15c87a16be055b52aa1ad9eef955f9da.sample"
+type="AudioStreamWAV"
+uid="uid://cxcj7mj525hjd"
+path="res://.godot/imported/SCRAPE2.wav-15c87a16be055b52aa1ad9eef955f9da.sample"
 
 [deps]
 
 source_file="res://Sounds/SCRAPE2.wav"
-dest_files=[ "res://.import/SCRAPE2.wav-15c87a16be055b52aa1ad9eef955f9da.sample" ]
+dest_files=["res://.godot/imported/SCRAPE2.wav-15c87a16be055b52aa1ad9eef955f9da.sample"]
 
 [params]
 
@@ -17,5 +18,7 @@ force/max_rate=false
 force/max_rate_hz=44100
 edit/trim=false
 edit/normalize=false
-edit/loop=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
 compress/mode=0

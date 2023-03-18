@@ -1,0 +1,9 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://bfqrdk86cm1io"]
+
+[ext_resource type="FontFile" uid="uid://dkfr54mufp871" path="res://Fonts/Androgyne_TB.otf" id="1_f5evw"]
+
+[resource]
+font = ExtResource("1_f5evw")
+font_size = 48
+outline_size = 6
+shadow_size = 0

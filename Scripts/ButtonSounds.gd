@@ -1,7 +1,7 @@
 extends AudioStreamPlayer
 
 var cooldown = 0
-export var cooldownTime = 15
+@export var cooldownTime = 15
 
 
 func _process(_delta):
@@ -15,7 +15,7 @@ func hoverSound():
 		print("Played hover sound")
 		cooldown = cooldownTime
 		
-# Play scrape2.wav on click
+# Play scrape2.wav checked click
 func clickSound():
 	if cooldown == 0: 
 		self.set_stream(load("res://Sounds/SCRAPE2.wav"))
@@ -61,4 +61,4 @@ func _on_Uninstall_pressed():
 func _on_Quit_pressed():
 	pass
 	#clickSound()
-	#wont play for some reason, and instead of adding a timer lets just keep it off for now
+	#wont play for some reason, and instead of adding a timer lets just keep it unchecked for now
