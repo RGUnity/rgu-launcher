@@ -436,7 +436,7 @@ lineEdit = NodePath("LineEdit")
 
 [node name="Label" type="Label" parent="Window Contents Margin/Window Contents/Path bar"]
 layout_mode = 2
-text = "Redguard Path:"
+text = "Redguard Folder:"
 vertical_alignment = 1
 
 [node name="LineEdit" type="LineEdit" parent="Window Contents Margin/Window Contents/Path bar"]
@@ -444,7 +444,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_placeholder_color = Color(0.478431, 0.478431, 0.478431, 1)
 theme_override_colors/selection_color = Color(0, 0.470588, 0.843137, 1)
-placeholder_text = " The folder containing REDGUARD.EXE"
+placeholder_text = "The folder containing REDGUARD.EXE"
 caret_blink = true
 caret_blink_interval = 0.5
 
