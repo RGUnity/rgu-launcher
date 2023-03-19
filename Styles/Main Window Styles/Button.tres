@@ -7,6 +7,6 @@ default_font_size = 36
 Button/colors/font_color = Color(1, 0, 0, 1)
 Button/colors/font_hover_color = Color(1, 0.494118, 0.427451, 1)
 Button/colors/font_outline_color = Color(0, 0, 0, 1)
-Button/colors/font_pressed_color = Color(1, 0.833925, 0.806108, 1)
+Button/colors/font_pressed_color = Color(1, 0.835294, 0.807843, 1)
 Button/constants/outline_size = 6
 Button/fonts/font = ExtResource("1_ducka")
