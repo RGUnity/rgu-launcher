@@ -3,10 +3,10 @@ extends Button
 
 func _pressed():
 	
-	var popup = windowScene.instantiate()
+	var window = windowScene.instantiate()
 	var sceneRoot = self.owner
-	sceneRoot.add_child(popup)
-	popup.popup()
+	sceneRoot.add_child(window)
+	window.show()
 
 
 
