@@ -1,26 +1,26 @@
-[gd_resource type="Theme" load_steps=32 format=3]
+[gd_resource type="Theme" load_steps=33 format=3 uid="uid://w4w1xvc37vky"]
 
-[ext_resource type="Texture2D" uid="uid://canpj2u7p27ly" path="res://Sprites/Checkmark.png" id="1"]
-[ext_resource type="FontFile" path="res://Fonts/Roboto_small.tres" id="2"]
-[ext_resource type="StyleBox" uid="uid://is3xcgft7hla" path="res://Styles/Popup Window Styles/Button.tres" id="3"]
-[ext_resource type="StyleBox" uid="uid://du00vo41ba0xp" path="res://Styles/Popup Window Styles/Button_pressed.tres" id="4"]
-[ext_resource type="Texture2D" uid="uid://bnq47hjbmmg7d" path="res://Sprites/Checkbox_checked.png" id="4_3po2x"]
-[ext_resource type="StyleBox" uid="uid://d3pcniq781ksq" path="res://Styles/Popup Window Styles/Scrollbar.tres" id="5"]
-[ext_resource type="StyleBox" uid="uid://dhueagmq75kle" path="res://Styles/Popup Window Styles/Scrollbar_BG.tres" id="6"]
-[ext_resource type="Texture2D" uid="uid://whas88ntwok2" path="res://Sprites/Checkbox_disabled.png" id="6_a44vm"]
-[ext_resource type="Texture2D" uid="uid://7xlw7muxppnq" path="res://Sprites/WindowBorder2.png" id="8"]
-[ext_resource type="Texture2D" uid="uid://cton5i7b7hhjc" path="res://Sprites/Folder_Up_flat.png" id="10"]
-[ext_resource type="Texture2D" uid="uid://dc6jskb17w42q" path="res://Sprites/DropdownArrow.png" id="10_kt3wn"]
-[ext_resource type="Texture2D" uid="uid://b3emvmhv55jgo" path="res://Sprites/Folder.png" id="11"]
-[ext_resource type="Texture2D" uid="uid://buys2qbkr5rhr" path="res://Sprites/Refresh.png" id="12"]
-[ext_resource type="Texture2D" uid="uid://boldsih8vd4mf" path="res://Sprites/Slider_Small.png" id="12_0eesj"]
-[ext_resource type="Texture2D" uid="uid://svosc8fxt05f" path="res://Sprites/Eye.png" id="13"]
-[ext_resource type="Texture2D" uid="uid://bwbfidbt0fwqq" path="res://Sprites/SliderLine.png" id="13_tsh5y"]
-[ext_resource type="Texture2D" uid="uid://3x70yyh7uy33" path="res://Sprites/File.png" id="14"]
-[ext_resource type="Texture2D" uid="uid://cs26pvt8ejqtc" path="res://Sprites/Checkbox.png" id="15"]
+[ext_resource type="FontFile" uid="uid://onphxclooijs" path="res://Fonts/Roboto-Regular.ttf" id="1_alqhs"]
+[ext_resource type="StyleBox" uid="uid://is3xcgft7hla" path="res://Styles/Popup Window Styles/Button.tres" id="2_d4wfg"]
+[ext_resource type="StyleBox" uid="uid://du00vo41ba0xp" path="res://Styles/Popup Window Styles/Button_pressed.tres" id="3_jlddx"]
+[ext_resource type="Texture2D" uid="uid://bnq47hjbmmg7d" path="res://Sprites/Checkbox_checked.png" id="4_68j74"]
+[ext_resource type="Texture2D" uid="uid://cs26pvt8ejqtc" path="res://Sprites/Checkbox.png" id="5_73tlk"]
+[ext_resource type="Texture2D" uid="uid://whas88ntwok2" path="res://Sprites/Checkbox_disabled.png" id="6_768or"]
+[ext_resource type="Texture2D" uid="uid://3x70yyh7uy33" path="res://Sprites/File.png" id="7_ents1"]
+[ext_resource type="Texture2D" uid="uid://b3emvmhv55jgo" path="res://Sprites/Folder.png" id="8_6hwue"]
+[ext_resource type="Texture2D" uid="uid://cton5i7b7hhjc" path="res://Sprites/Folder_Up_flat.png" id="9_sml4i"]
+[ext_resource type="Texture2D" uid="uid://buys2qbkr5rhr" path="res://Sprites/Refresh.png" id="10_uw6fn"]
+[ext_resource type="Texture2D" uid="uid://svosc8fxt05f" path="res://Sprites/Eye.png" id="11_yapuy"]
+[ext_resource type="Texture2D" uid="uid://boldsih8vd4mf" path="res://Sprites/Slider_Small.png" id="12_qi68k"]
+[ext_resource type="Texture2D" uid="uid://bwbfidbt0fwqq" path="res://Sprites/SliderLine.png" id="13_u4q8j"]
+[ext_resource type="Texture2D" uid="uid://dc6jskb17w42q" path="res://Sprites/DropdownArrow.png" id="14_3g5xn"]
+[ext_resource type="Texture2D" uid="uid://canpj2u7p27ly" path="res://Sprites/Checkmark.png" id="15_3ogbk"]
+[ext_resource type="StyleBox" uid="uid://d3pcniq781ksq" path="res://Styles/Popup Window Styles/Scrollbar.tres" id="16_e1l2t"]
+[ext_resource type="StyleBox" uid="uid://dhueagmq75kle" path="res://Styles/Popup Window Styles/Scrollbar_BG.tres" id="17_tmhmy"]
+[ext_resource type="Texture2D" uid="uid://7xlw7muxppnq" path="res://Sprites/WindowBorder2.png" id="18_er0v8"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1eqtq"]
-texture = ExtResource("13_tsh5y")
+texture = ExtResource("13_u4q8j")
 texture_margin_left = 2.0
 texture_margin_top = 2.0
 texture_margin_right = 2.0
@@ -30,7 +30,7 @@ texture_margin_bottom = 2.0
 bg_color = Color(0.941176, 0.941176, 0.941176, 1)
 
 [sub_resource type="StyleBoxTexture" id="27"]
-texture = ExtResource("15")
+texture = ExtResource("5_73tlk")
 texture_margin_left = 2.0
 texture_margin_top = 2.0
 texture_margin_right = 2.0
@@ -38,7 +38,7 @@ texture_margin_bottom = 2.0
 region_rect = Rect2(0, 0, 13, 13)
 
 [sub_resource type="StyleBoxTexture" id="28"]
-texture = ExtResource("15")
+texture = ExtResource("5_73tlk")
 texture_margin_left = 2.0
 texture_margin_top = 2.0
 texture_margin_right = 2.0
@@ -64,7 +64,7 @@ shadow_size = 1
 shadow_offset = Vector2(1, 1)
 
 [sub_resource type="StyleBoxTexture" id="17"]
-texture = ExtResource("15")
+texture = ExtResource("5_73tlk")
 region_rect = Rect2(0, 0, 13, 13)
 
 [sub_resource type="StyleBoxFlat" id="11"]
@@ -78,12 +78,102 @@ bg_color = Color(0, 0.470588, 0.843137, 1)
 [sub_resource type="ImageTexture" id="16"]
 
 [sub_resource type="StyleBoxTexture" id="13"]
-texture = ExtResource("8")
+texture = ExtResource("18_er0v8")
 expand_margin_top = 22.0
 region_rect = Rect2(0, 0, 32, 25)
 
+[sub_resource type="FontFile" id="FontFile_wsdel"]
+fallbacks = Array[Font]([ExtResource("1_alqhs")])
+face_index = null
+embolden = null
+transform = null
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/50/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/36/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/15/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/14/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/13/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/12/0 = Vector2(0, 0)
+cache/0/50/0/ascent = 0.0
+cache/0/50/0/descent = 0.0
+cache/0/50/0/underline_position = 0.0
+cache/0/50/0/underline_thickness = 0.0
+cache/0/50/0/scale = 1.0
+cache/0/50/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/50/0/kerning_overrides/50/0 = Vector2(0, 0)
+cache/0/50/0/kerning_overrides/36/0 = Vector2(0, 0)
+cache/0/50/0/kerning_overrides/15/0 = Vector2(0, 0)
+cache/0/50/0/kerning_overrides/14/0 = Vector2(0, 0)
+cache/0/50/0/kerning_overrides/13/0 = Vector2(0, 0)
+cache/0/50/0/kerning_overrides/12/0 = Vector2(0, 0)
+cache/0/36/0/ascent = 0.0
+cache/0/36/0/descent = 0.0
+cache/0/36/0/underline_position = 0.0
+cache/0/36/0/underline_thickness = 0.0
+cache/0/36/0/scale = 1.0
+cache/0/36/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/36/0/kerning_overrides/50/0 = Vector2(0, 0)
+cache/0/36/0/kerning_overrides/36/0 = Vector2(0, 0)
+cache/0/36/0/kerning_overrides/15/0 = Vector2(0, 0)
+cache/0/36/0/kerning_overrides/14/0 = Vector2(0, 0)
+cache/0/36/0/kerning_overrides/13/0 = Vector2(0, 0)
+cache/0/36/0/kerning_overrides/12/0 = Vector2(0, 0)
+cache/0/15/0/ascent = 0.0
+cache/0/15/0/descent = 0.0
+cache/0/15/0/underline_position = 0.0
+cache/0/15/0/underline_thickness = 0.0
+cache/0/15/0/scale = 1.0
+cache/0/15/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/15/0/kerning_overrides/50/0 = Vector2(0, 0)
+cache/0/15/0/kerning_overrides/36/0 = Vector2(0, 0)
+cache/0/15/0/kerning_overrides/15/0 = Vector2(0, 0)
+cache/0/15/0/kerning_overrides/14/0 = Vector2(0, 0)
+cache/0/15/0/kerning_overrides/13/0 = Vector2(0, 0)
+cache/0/15/0/kerning_overrides/12/0 = Vector2(0, 0)
+cache/0/14/0/ascent = 0.0
+cache/0/14/0/descent = 0.0
+cache/0/14/0/underline_position = 0.0
+cache/0/14/0/underline_thickness = 0.0
+cache/0/14/0/scale = 1.0
+cache/0/14/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/14/0/kerning_overrides/50/0 = Vector2(0, 0)
+cache/0/14/0/kerning_overrides/36/0 = Vector2(0, 0)
+cache/0/14/0/kerning_overrides/15/0 = Vector2(0, 0)
+cache/0/14/0/kerning_overrides/14/0 = Vector2(0, 0)
+cache/0/14/0/kerning_overrides/13/0 = Vector2(0, 0)
+cache/0/14/0/kerning_overrides/12/0 = Vector2(0, 0)
+cache/0/13/0/ascent = 0.0
+cache/0/13/0/descent = 0.0
+cache/0/13/0/underline_position = 0.0
+cache/0/13/0/underline_thickness = 0.0
+cache/0/13/0/scale = 1.0
+cache/0/13/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/13/0/kerning_overrides/50/0 = Vector2(0, 0)
+cache/0/13/0/kerning_overrides/36/0 = Vector2(0, 0)
+cache/0/13/0/kerning_overrides/15/0 = Vector2(0, 0)
+cache/0/13/0/kerning_overrides/14/0 = Vector2(0, 0)
+cache/0/13/0/kerning_overrides/13/0 = Vector2(0, 0)
+cache/0/13/0/kerning_overrides/12/0 = Vector2(0, 0)
+cache/0/12/0/ascent = 0.0
+cache/0/12/0/descent = 0.0
+cache/0/12/0/underline_position = 0.0
+cache/0/12/0/underline_thickness = 0.0
+cache/0/12/0/scale = 1.0
+cache/0/12/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/12/0/kerning_overrides/50/0 = Vector2(0, 0)
+cache/0/12/0/kerning_overrides/36/0 = Vector2(0, 0)
+cache/0/12/0/kerning_overrides/15/0 = Vector2(0, 0)
+cache/0/12/0/kerning_overrides/14/0 = Vector2(0, 0)
+cache/0/12/0/kerning_overrides/13/0 = Vector2(0, 0)
+cache/0/12/0/kerning_overrides/12/0 = Vector2(0, 0)
+
 [resource]
-default_font = ExtResource("2")
+default_font = SubResource("FontFile_wsdel")
 Button/colors/font_color = Color(0, 0, 0, 1)
 Button/colors/font_color_disabled = Color(0.388235, 0.388235, 0.388235, 1)
 Button/colors/font_color_hover = Color(0, 0, 0, 1)
@@ -92,39 +182,44 @@ Button/colors/font_focus_color = Color(0, 0, 0, 1)
 Button/colors/font_hover_color = Color(0, 0, 0, 1)
 Button/colors/font_hover_pressed_color = Color(0, 0, 0, 1)
 Button/colors/font_pressed_color = Color(0, 0, 0, 1)
-Button/fonts/font = ExtResource("2")
-Button/styles/disabled = ExtResource("3")
-Button/styles/focus = ExtResource("3")
-Button/styles/hover = ExtResource("3")
-Button/styles/normal = ExtResource("3")
-Button/styles/pressed = ExtResource("4")
-CheckBox/icons/checked = ExtResource("4_3po2x")
+Button/font_sizes/font_size = 12
+Button/fonts/font = ExtResource("1_alqhs")
+Button/styles/disabled = ExtResource("2_d4wfg")
+Button/styles/focus = ExtResource("2_d4wfg")
+Button/styles/hover = ExtResource("2_d4wfg")
+Button/styles/normal = ExtResource("2_d4wfg")
+Button/styles/pressed = ExtResource("3_jlddx")
+CheckBox/colors/font_disabled_color = Color(0.388235, 0.388235, 0.388235, 1)
+CheckBox/icons/checked = ExtResource("4_68j74")
 CheckBox/icons/checked_disabled = null
-CheckBox/icons/unchecked = ExtResource("15")
-CheckBox/icons/unchecked_disabled = ExtResource("6_a44vm")
-FileDialog/icons/file = ExtResource("14")
-FileDialog/icons/folder = ExtResource("11")
-FileDialog/icons/parent_folder = ExtResource("10")
-FileDialog/icons/reload = ExtResource("12")
-FileDialog/icons/toggle_hidden = ExtResource("13")
+CheckBox/icons/unchecked = ExtResource("5_73tlk")
+CheckBox/icons/unchecked_disabled = ExtResource("6_768or")
+FileDialog/icons/file = ExtResource("7_ents1")
+FileDialog/icons/folder = ExtResource("8_6hwue")
+FileDialog/icons/parent_folder = ExtResource("9_sml4i")
+FileDialog/icons/reload = ExtResource("10_uw6fn")
+FileDialog/icons/toggle_hidden = ExtResource("11_yapuy")
 HSlider/constants/grabber_offset = -1
-HSlider/icons/grabber = ExtResource("12_0eesj")
-HSlider/icons/grabber_disabled = ExtResource("12_0eesj")
-HSlider/icons/grabber_highlight = ExtResource("12_0eesj")
+HSlider/icons/grabber = ExtResource("12_qi68k")
+HSlider/icons/grabber_disabled = ExtResource("12_qi68k")
+HSlider/icons/grabber_highlight = ExtResource("12_qi68k")
 HSlider/styles/slider = SubResource("StyleBoxTexture_1eqtq")
 Label/colors/font_color = Color(0, 0, 0, 1)
 Label/constants/shadow_offset_x = 1
+Label/font_sizes/font_size = 12
 Label/styles/normal = SubResource("14")
 LineEdit/colors/cursor_color = Color(0, 0, 0, 1)
 LineEdit/colors/font_color = Color(0, 0, 0, 1)
+LineEdit/colors/font_uneditable_color = Color(0.388235, 0.388235, 0.388235, 1)
 LineEdit/colors/selection_color = Color(0, 0.470588, 0.843137, 1)
+LineEdit/font_sizes/font_size = 12
 LineEdit/styles/normal = SubResource("27")
 LineEdit/styles/read_only = SubResource("28")
 OptionButton/constants/arrow_margin = 2
-OptionButton/icons/arrow = ExtResource("10_kt3wn")
+OptionButton/icons/arrow = ExtResource("14_3g5xn")
 PopupMenu/colors/font_color = Color(0, 0, 0, 1)
 PopupMenu/colors/font_color_hover = Color(1, 1, 1, 1)
-PopupMenu/icons/radio_checked = ExtResource("1")
+PopupMenu/icons/radio_checked = ExtResource("15_3ogbk")
 PopupMenu/icons/radio_unchecked = SubResource("3")
 PopupMenu/styles/hover = SubResource("2")
 PopupMenu/styles/panel = SubResource("1")
@@ -132,11 +227,11 @@ Tree/colors/font_color = Color(0, 0, 0, 1)
 Tree/styles/bg = SubResource("17")
 Tree/styles/selected = SubResource("11")
 Tree/styles/selected_focus = SubResource("12")
-VScrollBar/styles/grabber = ExtResource("5")
-VScrollBar/styles/grabber_highlight = ExtResource("5")
-VScrollBar/styles/grabber_pressed = ExtResource("5")
-VScrollBar/styles/scroll = ExtResource("6")
-VScrollBar/styles/scroll_focus = ExtResource("6")
+VScrollBar/styles/grabber = ExtResource("16_e1l2t")
+VScrollBar/styles/grabber_highlight = ExtResource("16_e1l2t")
+VScrollBar/styles/grabber_pressed = ExtResource("16_e1l2t")
+VScrollBar/styles/scroll = ExtResource("17_tmhmy")
+VScrollBar/styles/scroll_focus = ExtResource("17_tmhmy")
 Window/colors/title_color = Color(0.929412, 0, 0.462745, 1)
 Window/constants/title_height = 35
 Window/icons/close = SubResource("15")
