@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://mpven7fvkqh3"]
+[gd_scene load_steps=21 format=3 uid="uid://hsdvm4xbgyuj"]
 
 [ext_resource type="Script" path="res://Scripts/Options Window Scripts/PopupManager.gd" id="1_qrtai"]
 [ext_resource type="Script" path="res://Scripts/Options Window Scripts/ConfigManager.gd" id="2_r83vd"]
@@ -7,7 +7,7 @@
 [ext_resource type="Script" path="res://Scripts/Options Window Scripts/SaveConfig.gd" id="5_jjxsy"]
 [ext_resource type="Script" path="res://Scripts/Options Window Scripts/ButtonSignalReceiver.gd" id="6_u7h6k"]
 [ext_resource type="Script" path="res://Scripts/Options Window Scripts/DependencyManager.gd" id="7_njjam"]
-[ext_resource type="Theme" path="res://Styles/Popup Window Styles/PopupMenu.tres" id="8_dbpdw"]
+[ext_resource type="Theme" uid="uid://w4w1xvc37vky" path="res://Styles/Popup Window Styles/PopupMenu.tres" id="8_dbpdw"]
 [ext_resource type="Texture2D" uid="uid://dbfyhoxow1dvx" path="res://Sprites/WindowBorder.png" id="8_yw34i"]
 [ext_resource type="StyleBox" uid="uid://4l8mmmx7u3qw" path="res://Styles/Popup Window Styles/DropdownStyle.tres" id="11_4ae1f"]
 [ext_resource type="Texture2D" uid="uid://dvdp55wfyfnqd" path="res://Sprites/Border.png" id="12_ha6qu"]
@@ -35,7 +35,6 @@ title = "Redguard Options"
 size = Vector2i(500, 375)
 exclusive = true
 unresizable = true
-always_on_top = true
 script = ExtResource("1_qrtai")
 
 [node name="ConfigManager" type="Node" parent="." node_paths=PackedStringArray("windowModeDropdown", "vsyncCheckbox", "limitFPSCheckbox", "maxFPSSpinbox", "antiAliasingCheckbox", "shadowsCheckbox", "musicSlider", "effectsSlider", "voicesSlider", "subtitlesCheckbox", "autodefendCheckbox", "redguardPathLineEdit")]
