@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://hsdvm4xbgyuj"]
+[gd_scene load_steps=22 format=3 uid="uid://hsdvm4xbgyuj"]
 
 [ext_resource type="Script" path="res://Scripts/Options Window Scripts/PopupManager.gd" id="1_qrtai"]
 [ext_resource type="Script" path="res://Scripts/Options Window Scripts/ConfigManager.gd" id="2_r83vd"]
@@ -18,7 +18,7 @@
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xgv7d"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6lonk"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5yepx"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_h1inq"]
 
@@ -27,6 +27,8 @@
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_aaf83"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gqn3f"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6lonk"]
 
 [node name="OptionsWindow" type="Window"]
 canvas_item_default_texture_filter = 0
@@ -139,7 +141,7 @@ patch_margin_bottom = 3
 [node name="Display Options Margin" type="MarginContainer" parent="Window Contents Margin/Window Contents/Settings Area/Left Panel/Display"]
 layout_mode = 2
 theme_override_constants/margin_left = 7
-theme_override_constants/margin_top = 2
+theme_override_constants/margin_top = 4
 theme_override_constants/margin_right = 7
 theme_override_constants/margin_bottom = 2
 
@@ -184,7 +186,7 @@ layout_mode = 2
 focus_mode = 0
 theme_override_constants/check_v_offset = 2
 theme_override_styles/normal = SubResource("StyleBoxEmpty_xgv7d")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_6lonk")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_5yepx")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_h1inq")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_xw2vr")
 theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_aaf83")
@@ -240,7 +242,7 @@ patch_margin_bottom = 3
 [node name="Graphics Options Margin" type="MarginContainer" parent="Window Contents Margin/Window Contents/Settings Area/Left Panel/Graphics"]
 layout_mode = 2
 theme_override_constants/margin_left = 7
-theme_override_constants/margin_top = 2
+theme_override_constants/margin_top = 4
 theme_override_constants/margin_right = 7
 theme_override_constants/margin_bottom = 2
 
@@ -255,6 +257,7 @@ text = " Graphics "
 vertical_alignment = 1
 
 [node name="AntiAliasing" type="CheckBox" parent="Window Contents Margin/Window Contents/Settings Area/Left Panel/Graphics/Graphics Options Margin/Graphics Options"]
+texture_filter = 1
 layout_mode = 2
 focus_mode = 0
 theme_override_constants/check_v_offset = 2
@@ -305,7 +308,7 @@ patch_margin_bottom = 3
 [node name="Audio Options Margin" type="MarginContainer" parent="Window Contents Margin/Window Contents/Settings Area/Right Panel/Audio"]
 layout_mode = 2
 theme_override_constants/margin_left = 7
-theme_override_constants/margin_top = 2
+theme_override_constants/margin_top = 4
 theme_override_constants/margin_right = 7
 theme_override_constants/margin_bottom = 2
 
@@ -316,7 +319,7 @@ layout_mode = 2
 layout_mode = 2
 size_flags_horizontal = 0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = " Audio "
+text = "Audio"
 vertical_alignment = 1
 
 [node name="Music" type="Label" parent="Window Contents Margin/Window Contents/Settings Area/Right Panel/Audio/Audio Options Margin/Audio Options"]
@@ -372,7 +375,7 @@ patch_margin_bottom = 3
 [node name="Gameplay Options Margin" type="MarginContainer" parent="Window Contents Margin/Window Contents/Settings Area/Right Panel/Gameplay"]
 layout_mode = 2
 theme_override_constants/margin_left = 7
-theme_override_constants/margin_top = 2
+theme_override_constants/margin_top = 4
 theme_override_constants/margin_right = 7
 theme_override_constants/margin_bottom = 2
 
@@ -438,14 +441,17 @@ vertical_alignment = 1
 [node name="LineEdit" type="LineEdit" parent="Window Contents Margin/Window Contents/Path bar"]
 layout_mode = 2
 size_flags_horizontal = 3
+focus_mode = 0
 theme_override_colors/font_placeholder_color = Color(0.478431, 0.478431, 0.478431, 1)
 placeholder_text = " The folder containing REDGUARD.EXE"
 caret_blink = true
 caret_blink_interval = 0.5
 
 [node name="SelectPath" type="Button" parent="Window Contents Margin/Window Contents/Path bar"]
+custom_minimum_size = Vector2(23.417, 0)
 layout_mode = 2
-text = " ... "
+focus_mode = 0
+text = "…"
 
 [node name="Button Bar" type="HBoxContainer" parent="Window Contents Margin/Window Contents"]
 layout_mode = 2
