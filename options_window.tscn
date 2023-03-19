@@ -33,7 +33,7 @@
 [node name="OptionsWindow" type="Window"]
 canvas_item_default_texture_filter = 0
 initial_position = 1
-title = "Redguard Options"
+title = "Game Options"
 size = Vector2i(500, 375)
 exclusive = true
 unresizable = true

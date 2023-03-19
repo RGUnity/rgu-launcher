@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="RGU Launcher"
+config/name="Redguard Unity Launcher"
 run/main_scene="res://main_window.tscn"
 config/use_custom_user_dir=true
 config/custom_user_dir_name="/RGUnityTest"
