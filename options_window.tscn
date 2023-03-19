@@ -34,7 +34,7 @@
 canvas_item_default_texture_filter = 0
 initial_position = 1
 title = "Game Options"
-size = Vector2i(500, 375)
+size = Vector2i(400, 325)
 exclusive = true
 unresizable = true
 script = ExtResource("1_qrtai")
