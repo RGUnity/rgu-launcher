@@ -95,9 +95,10 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_vertical = 3
 theme = ExtResource("8_dbpdw")
-theme_override_constants/margin_left = 5
-theme_override_constants/margin_right = 5
-theme_override_constants/margin_bottom = 5
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
 metadata/_edit_use_anchors_ = true
 
 [node name="Window Contents" type="VBoxContainer" parent="Window Contents Margin"]
