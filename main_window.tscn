@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://dhgppagy2p0l0"]
+[gd_scene load_steps=16 format=3 uid="uid://dhgppagy2p0l0"]
 
 [ext_resource type="Texture2D" uid="uid://o34sfyeojsgi" path="res://Sprites/Background.png" id="1_xs0gr"]
 [ext_resource type="LabelSettings" uid="uid://bfqrdk86cm1io" path="res://Styles/Main Window Styles/TextButtonShadow_large.tres" id="2_13662"]
@@ -6,6 +6,7 @@
 [ext_resource type="Theme" uid="uid://bxe5pf3einr0o" path="res://Styles/Main Window Styles/MainButton.tres" id="4_nbm8l"]
 [ext_resource type="Script" path="res://Scripts/Main Window Scripts/PlayRedguard.gd" id="5_lvwkv"]
 [ext_resource type="Script" path="res://Scripts/Main Window Scripts/OpenOptionsWindow.gd" id="7_w3t3n"]
+[ext_resource type="Script" path="res://Scripts/Main Window Scripts/UninstallButton.gd" id="9_6utra"]
 [ext_resource type="Script" path="res://Scripts/Main Window Scripts/Quit.gd" id="9_7kvq2"]
 [ext_resource type="Script" path="res://Scripts/Main Window Scripts/OpenWebsite.gd" id="9_q77og"]
 [ext_resource type="Script" path="res://Scripts/Main Window Scripts/AudioPlayer.gd" id="10_3pgcw"]
@@ -143,6 +144,7 @@ theme = ExtResource("4_nbm8l")
 text = "UNINSTALL"
 flat = true
 alignment = 2
+script = ExtResource("9_6utra")
 
 [node name="Quit" type="Button" parent="Main Buttons"]
 layout_mode = 2
@@ -160,3 +162,5 @@ hoverSounds = Array[AudioStream]([ExtResource("11_lbt5i"), ExtResource("12_y6138
 pressedSounds = Array[AudioStream]([ExtResource("14_wbjay")])
 buttonParent = NodePath("../Main Buttons")
 testButtonPath = NodePath("../Main Buttons/Technical Support")
+
+[connection signal="pressed" from="Main Buttons/Uninstall" to="Main Buttons/Uninstall" method="_on_pressed"]
