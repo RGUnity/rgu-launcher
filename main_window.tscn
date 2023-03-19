@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://cmhi7xo0kvied"]
+[gd_scene load_steps=15 format=3 uid="uid://cmhi7xo0kvied"]
 
 [ext_resource type="Texture2D" uid="uid://o34sfyeojsgi" path="res://Sprites/Background.png" id="1_xs0gr"]
 [ext_resource type="LabelSettings" uid="uid://bfqrdk86cm1io" path="res://Styles/Main Window Styles/TextButtonShadow_large.tres" id="2_13662"]
@@ -8,7 +8,12 @@
 [ext_resource type="Theme" uid="uid://bxe5pf3einr0o" path="res://Styles/Main Window Styles/Button.tres" id="6_gd2eh"]
 [ext_resource type="Script" path="res://Scripts/Main Window Scripts/OpenOptionsWindow.gd" id="7_w3t3n"]
 [ext_resource type="Script" path="res://Scripts/Main Window Scripts/Quit.gd" id="9_7kvq2"]
+[ext_resource type="Script" path="res://Scripts/Main Window Scripts/AudioPlayer.gd" id="10_3pgcw"]
 [ext_resource type="PackedScene" uid="uid://hsdvm4xbgyuj" path="res://options_window.tscn" id="10_isej0"]
+[ext_resource type="AudioStream" uid="uid://c7qe7tgy8stp" path="res://Sounds/RATTLE1.wav" id="11_lbt5i"]
+[ext_resource type="AudioStream" uid="uid://cxgweq2fugss2" path="res://Sounds/RATTLE2.wav" id="12_y6138"]
+[ext_resource type="AudioStream" uid="uid://lprnjvrf68ed" path="res://Sounds/RATTLE3.wav" id="13_l0gq0"]
+[ext_resource type="AudioStream" uid="uid://cxcj7mj525hjd" path="res://Sounds/SCRAPE2.wav" id="14_wbjay"]
 
 [node name="Main Window Root" type="Control"]
 texture_filter = 1
@@ -142,3 +147,10 @@ text = "QUIT"
 flat = true
 alignment = 2
 script = ExtResource("9_7kvq2")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." node_paths=PackedStringArray("buttonParent")]
+script = ExtResource("10_3pgcw")
+hoverSounds = Array[AudioStream]([ExtResource("11_lbt5i"), ExtResource("12_y6138"), ExtResource("13_l0gq0")])
+pressedSounds = Array[AudioStream]([ExtResource("14_wbjay")])
+buttonParent = NodePath("../Main Buttons")
+testButtonPath = NodePath("../Main Buttons/Technical Support")
