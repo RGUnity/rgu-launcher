@@ -1,14 +1,14 @@
-[gd_scene load_steps=10 format=3 uid="uid://dckr4bvpr8uq0"]
+[gd_scene load_steps=10 format=3 uid="uid://crqu5c6w3vmgm"]
 
 [ext_resource type="Texture2D" uid="uid://o34sfyeojsgi" path="res://Sprites/Background.png" id="1_xs0gr"]
 [ext_resource type="LabelSettings" uid="uid://bfqrdk86cm1io" path="res://Styles Main Window/TextButtonShadow_large.tres" id="2_ry7ei"]
 [ext_resource type="LabelSettings" uid="uid://dmnwc0n77e1a7" path="res://Styles Main Window/TextButtonShadow.tres" id="3_51yra"]
 [ext_resource type="Theme" uid="uid://h5443ot80yao" path="res://Styles Main Window/Button_large.tres" id="4_d2rdr"]
-[ext_resource type="Script" path="res://Scripts/PlayRedguard.gd" id="5_ayw7a"]
+[ext_resource type="Script" path="res://Scripts/Main Window Scripts/PlayRedguard.gd" id="5_lvwkv"]
 [ext_resource type="Theme" uid="uid://bxe5pf3einr0o" path="res://Styles Main Window/Button.tres" id="6_am6ky"]
-[ext_resource type="Script" path="res://Scripts/GameOptions.gd" id="7_qfpb4"]
-[ext_resource type="Script" path="res://Scripts/Quit.gd" id="8_k57hf"]
-[ext_resource type="PackedScene" uid="uid://jnwyd45vvf66" path="res://options_window.tscn" id="10_isej0"]
+[ext_resource type="Script" path="res://Scripts/Main Window Scripts/GameOptions.gd" id="7_k35r3"]
+[ext_resource type="Script" path="res://Scripts/Main Window Scripts/Quit.gd" id="9_7kvq2"]
+[ext_resource type="PackedScene" uid="uid://4blwanf1y46p" path="res://options_window.tscn" id="10_isej0"]
 
 [node name="Main Window Root" type="Control"]
 texture_filter = 1
@@ -98,7 +98,7 @@ theme = ExtResource("4_d2rdr")
 text = "PLAY REDGUARD"
 flat = true
 alignment = 2
-script = ExtResource("5_ayw7a")
+script = ExtResource("5_lvwkv")
 
 [node name="Game Options" type="Button" parent="Main Buttons"]
 layout_mode = 2
@@ -107,7 +107,7 @@ theme = ExtResource("6_am6ky")
 text = "GAME OPTIONS"
 flat = true
 alignment = 2
-script = ExtResource("7_qfpb4")
+script = ExtResource("7_k35r3")
 windowScene = ExtResource("10_isej0")
 
 [node name="Technical Support" type="Button" parent="Main Buttons"]
@@ -141,4 +141,4 @@ theme = ExtResource("6_am6ky")
 text = "QUIT"
 flat = true
 alignment = 2
-script = ExtResource("8_k57hf")
+script = ExtResource("9_7kvq2")

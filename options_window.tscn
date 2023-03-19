@@ -1,38 +1,18 @@
-[gd_scene load_steps=28 format=3 uid="uid://jnwyd45vvf66"]
+[gd_scene load_steps=21 format=3 uid="uid://4blwanf1y46p"]
 
-[ext_resource type="Script" path="res://Scripts/ConfigManager.gd" id="1_n6noq"]
-[ext_resource type="Script" path="res://Scripts/PopupManager.gd" id="1_nax6r"]
-[ext_resource type="Script" path="res://Scripts/LoadConfig.gd" id="2_72syl"]
-[ext_resource type="Script" path="res://Scripts/LoadDefaultConfig.gd" id="3_tem08"]
-[ext_resource type="Script" path="res://Scripts/SaveConfig.gd" id="4_w02jb"]
-[ext_resource type="Script" path="res://Scripts/ButtonSignalReceiver.gd" id="5_x3lx7"]
-[ext_resource type="Script" path="res://Scripts/DependencyManager.gd" id="6_nyjvv"]
+[ext_resource type="Script" path="res://Scripts/Options Window Scripts/PopupManager.gd" id="1_qrtai"]
+[ext_resource type="Script" path="res://Scripts/Options Window Scripts/ConfigManager.gd" id="2_r83vd"]
+[ext_resource type="Script" path="res://Scripts/Options Window Scripts/LoadConfig.gd" id="3_jw0u3"]
+[ext_resource type="Script" path="res://Scripts/Options Window Scripts/LoadDefaultConfig.gd" id="4_p78rq"]
+[ext_resource type="Script" path="res://Scripts/Options Window Scripts/SaveConfig.gd" id="5_jjxsy"]
+[ext_resource type="Script" path="res://Scripts/Options Window Scripts/ButtonSignalReceiver.gd" id="6_u7h6k"]
+[ext_resource type="Script" path="res://Scripts/Options Window Scripts/DependencyManager.gd" id="7_njjam"]
 [ext_resource type="Theme" uid="uid://npsys71erk22" path="res://Styles Popup Window/PopupMenu.tres" id="7_pwah2"]
 [ext_resource type="Texture2D" uid="uid://dbfyhoxow1dvx" path="res://Sprites/WindowBorder.png" id="8_yw34i"]
-[ext_resource type="Texture2D" uid="uid://7xlw7muxppnq" path="res://Sprites/WindowBorder2.png" id="9_1yutt"]
-[ext_resource type="Texture2D" uid="uid://b4dy3pe5sxpoe" path="res://Sprites/WindowClose.png" id="10_6r6wl"]
-[ext_resource type="Script" path="res://Scripts/CloseWindow.gd" id="11_8k5x0"]
 [ext_resource type="Texture2D" uid="uid://dvdp55wfyfnqd" path="res://Sprites/Border.png" id="12_ha6qu"]
 [ext_resource type="StyleBox" uid="uid://4l8mmmx7u3qw" path="res://Styles Popup Window/DropdownStyle.tres" id="13_vq30m"]
 [ext_resource type="Texture2D" uid="uid://d25o7fuik0h20" path="res://Sprites/UpDown.png" id="14_d1vkh"]
-[ext_resource type="Script" path="res://Scripts/OpenFileDialog.gd" id="15_1426b"]
-
-[sub_resource type="Theme" id="Theme_cmocx"]
-MarginContainer/constants/margin_bottom = 0
-MarginContainer/constants/margin_left = 3
-MarginContainer/constants/margin_right = 3
-MarginContainer/constants/margin_top = 3
-
-[sub_resource type="Theme" id="Theme_q1g54"]
-MarginContainer/constants/margin_bottom = 0
-MarginContainer/constants/margin_left = 4
-MarginContainer/constants/margin_right = 0
-MarginContainer/constants/margin_top = 0
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bglpd"]
-
-[sub_resource type="Theme" id="Theme_g05jl"]
-Label/styles/normal = SubResource("StyleBoxEmpty_bglpd")
+[ext_resource type="Script" path="res://Scripts/Options Window Scripts/OpenFileDialog.gd" id="16_bgvux"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_mlega"]
 
@@ -56,42 +36,42 @@ size = Vector2i(500, 375)
 exclusive = true
 unresizable = true
 always_on_top = true
-script = ExtResource("1_nax6r")
+script = ExtResource("1_qrtai")
 
 [node name="ConfigManager" type="Node" parent="." node_paths=PackedStringArray("windowModeDropdown", "vsyncCheckbox", "limitFPSCheckbox", "maxFPSSpinbox", "antiAliasingCheckbox", "shadowsCheckbox", "musicSlider", "effectsSlider", "voicesSlider", "subtitlesCheckbox", "autodefendCheckbox", "redguardPathLineEdit")]
 unique_name_in_owner = true
-script = ExtResource("1_n6noq")
-windowModeDropdown = NodePath("../Window/Window Contents Margin/Window Contents/Settings Area/Left Panel/Display/Display Options Margin/Display Options/Window Mode")
-vsyncCheckbox = NodePath("../Window/Window Contents Margin/Window Contents/Settings Area/Left Panel/Display/Display Options Margin/Display Options/VSync")
-limitFPSCheckbox = NodePath("../Window/Window Contents Margin/Window Contents/Settings Area/Left Panel/Display/Display Options Margin/Display Options/FPSLimit Parent/FPSLimit")
-maxFPSSpinbox = NodePath("../Window/Window Contents Margin/Window Contents/Settings Area/Left Panel/Display/Display Options Margin/Display Options/FPSLimit Parent/maxFPS")
-antiAliasingCheckbox = NodePath("../Window/Window Contents Margin/Window Contents/Settings Area/Left Panel/Graphics/Graphics Options Margin/Graphics Options/AntiAliasing")
-shadowsCheckbox = NodePath("../Window/Window Contents Margin/Window Contents/Settings Area/Left Panel/Graphics/Graphics Options Margin/Graphics Options/Shadows")
-musicSlider = NodePath("../Window/Window Contents Margin/Window Contents/Settings Area/Right Panel/Audio/Audio Options Margin/Audio Options/Music Volume Slider")
-effectsSlider = NodePath("../Window/Window Contents Margin/Window Contents/Settings Area/Right Panel/Audio/Audio Options Margin/Audio Options/Effects Volume Slider")
-voicesSlider = NodePath("../Window/Window Contents Margin/Window Contents/Settings Area/Right Panel/Audio/Audio Options Margin/Audio Options/Voices Volume Slider")
-subtitlesCheckbox = NodePath("../Window/Window Contents Margin/Window Contents/Settings Area/Right Panel/Gameplay/Gameplay Options Margin/Gameplay Options/Subtitles")
-autodefendCheckbox = NodePath("../Window/Window Contents Margin/Window Contents/Settings Area/Right Panel/Gameplay/Gameplay Options Margin/Gameplay Options/Auto-Defend")
-redguardPathLineEdit = NodePath("../Window/Window Contents Margin/Window Contents/Path bar/LineEdit")
+script = ExtResource("2_r83vd")
+windowModeDropdown = NodePath("../Window Contents Margin/Window Contents/Settings Area/Left Panel/Display/Display Options Margin/Display Options/Window Mode")
+vsyncCheckbox = NodePath("../Window Contents Margin/Window Contents/Settings Area/Left Panel/Display/Display Options Margin/Display Options/VSync")
+limitFPSCheckbox = NodePath("../Window Contents Margin/Window Contents/Settings Area/Left Panel/Display/Display Options Margin/Display Options/FPSLimit Parent/FPSLimit")
+maxFPSSpinbox = NodePath("../Window Contents Margin/Window Contents/Settings Area/Left Panel/Display/Display Options Margin/Display Options/FPSLimit Parent/maxFPS")
+antiAliasingCheckbox = NodePath("../Window Contents Margin/Window Contents/Settings Area/Left Panel/Graphics/Graphics Options Margin/Graphics Options/AntiAliasing")
+shadowsCheckbox = NodePath("../Window Contents Margin/Window Contents/Settings Area/Left Panel/Graphics/Graphics Options Margin/Graphics Options/Shadows")
+musicSlider = NodePath("../Window Contents Margin/Window Contents/Settings Area/Right Panel/Audio/Audio Options Margin/Audio Options/Music Volume Slider")
+effectsSlider = NodePath("../Window Contents Margin/Window Contents/Settings Area/Right Panel/Audio/Audio Options Margin/Audio Options/Effects Volume Slider")
+voicesSlider = NodePath("../Window Contents Margin/Window Contents/Settings Area/Right Panel/Audio/Audio Options Margin/Audio Options/Voices Volume Slider")
+subtitlesCheckbox = NodePath("../Window Contents Margin/Window Contents/Settings Area/Right Panel/Gameplay/Gameplay Options Margin/Gameplay Options/Subtitles")
+autodefendCheckbox = NodePath("../Window Contents Margin/Window Contents/Settings Area/Right Panel/Gameplay/Gameplay Options Margin/Gameplay Options/Auto-Defend")
+redguardPathLineEdit = NodePath("../Window Contents Margin/Window Contents/Path bar/LineEdit")
 
 [node name="ConfigLoader" type="Node" parent="ConfigManager"]
 unique_name_in_owner = true
-script = ExtResource("2_72syl")
+script = ExtResource("3_jw0u3")
 
 [node name="DefaultConfigLoader" type="Node" parent="ConfigManager"]
 unique_name_in_owner = true
-script = ExtResource("3_tem08")
+script = ExtResource("4_p78rq")
 
 [node name="ConfigSaver" type="Node" parent="ConfigManager"]
 unique_name_in_owner = true
-script = ExtResource("4_w02jb")
+script = ExtResource("5_jjxsy")
 
 [node name="ButtonSignalReceiver" type="Node" parent="ConfigManager"]
-script = ExtResource("5_x3lx7")
+script = ExtResource("6_u7h6k")
 
 [node name="DependencyManager" type="Node" parent="ConfigManager"]
 unique_name_in_owner = true
-script = ExtResource("6_nyjvv")
+script = ExtResource("7_njjam")
 
 [node name="NinePatchRect" type="NinePatchRect" parent="."]
 texture_filter = 1
@@ -108,82 +88,39 @@ patch_margin_right = 6
 patch_margin_bottom = 6
 metadata/_edit_use_anchors_ = true
 
-[node name="Window" type="VBoxContainer" parent="."]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 4
-theme = ExtResource("7_pwah2")
-
-[node name="Title Bar (obsolete)" type="MarginContainer" parent="Window"]
-visible = false
-layout_mode = 2
-theme = SubResource("Theme_cmocx")
-
-[node name="Blue Background" type="NinePatchRect" parent="Window/Title Bar (obsolete)"]
-layout_mode = 2
-texture = ExtResource("9_1yutt")
-region_rect = Rect2(6, 7, 3, 11)
-axis_stretch_horizontal = 1
-axis_stretch_vertical = 1
-
-[node name="TitleAndClose" type="HBoxContainer" parent="Window/Title Bar (obsolete)"]
-layout_mode = 2
-
-[node name="MarginContainer2" type="MarginContainer" parent="Window/Title Bar (obsolete)/TitleAndClose"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme = SubResource("Theme_q1g54")
-
-[node name="Redguard Options" type="Label" parent="Window/Title Bar (obsolete)/TitleAndClose/MarginContainer2"]
-layout_mode = 2
-theme = SubResource("Theme_g05jl")
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-text = "Redguard Options"
-vertical_alignment = 1
-
-[node name="MarginContainer" type="MarginContainer" parent="Window/Title Bar (obsolete)/TitleAndClose"]
-layout_mode = 2
-
-[node name="Close Button" type="TextureButton" parent="Window/Title Bar (obsolete)/TitleAndClose/MarginContainer"]
-layout_mode = 2
-texture_normal = ExtResource("10_6r6wl")
-stretch_mode = 3
-script = ExtResource("11_8k5x0")
-
-[node name="Window Contents Margin" type="MarginContainer" parent="Window"]
-layout_mode = 2
+[node name="Window Contents Margin" type="MarginContainer" parent="."]
+offset_right = 500.0
+offset_bottom = 375.0
 size_flags_vertical = 3
+theme = ExtResource("7_pwah2")
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 metadata/_edit_use_anchors_ = true
 
-[node name="Window Contents" type="VBoxContainer" parent="Window/Window Contents Margin"]
+[node name="Window Contents" type="VBoxContainer" parent="Window Contents Margin"]
 layout_mode = 2
 metadata/_edit_use_anchors_ = true
 
-[node name="Settings Area" type="HBoxContainer" parent="Window/Window Contents Margin/Window Contents"]
+[node name="Settings Area" type="HBoxContainer" parent="Window Contents Margin/Window Contents"]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Left Panel" type="VBoxContainer" parent="Window/Window Contents Margin/Window Contents/Settings Area"]
+[node name="Left Panel" type="VBoxContainer" parent="Window Contents Margin/Window Contents/Settings Area"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Display" type="PanelContainer" parent="Window/Window Contents Margin/Window Contents/Settings Area/Left Panel"]
+[node name="Display" type="PanelContainer" parent="Window Contents Margin/Window Contents/Settings Area/Left Panel"]
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Display Background Margin" type="MarginContainer" parent="Window/Window Contents Margin/Window Contents/Settings Area/Left Panel/Display"]
+[node name="Display Background Margin" type="MarginContainer" parent="Window Contents Margin/Window Contents/Settings Area/Left Panel/Display"]
 layout_mode = 2
 theme_override_constants/margin_top = 11
 
-[node name="Background" type="NinePatchRect" parent="Window/Window Contents Margin/Window Contents/Settings Area/Left Panel/Display/Display Background Margin"]
+[node name="Background" type="NinePatchRect" parent="Window Contents Margin/Window Contents/Settings Area/Left Panel/Display/Display Background Margin"]
 material = SubResource("CanvasItemMaterial_mlega")
 layout_mode = 2
 size_flags_vertical = 3
@@ -193,24 +130,24 @@ patch_margin_top = 3
 patch_margin_right = 3
 patch_margin_bottom = 3
 
-[node name="Display Options Margin" type="MarginContainer" parent="Window/Window Contents Margin/Window Contents/Settings Area/Left Panel/Display"]
+[node name="Display Options Margin" type="MarginContainer" parent="Window Contents Margin/Window Contents/Settings Area/Left Panel/Display"]
 layout_mode = 2
 theme_override_constants/margin_left = 7
 theme_override_constants/margin_top = 2
 theme_override_constants/margin_right = 7
 theme_override_constants/margin_bottom = 2
 
-[node name="Display Options" type="VBoxContainer" parent="Window/Window Contents Margin/Window Contents/Settings Area/Left Panel/Display/Display Options Margin"]
+[node name="Display Options" type="VBoxContainer" parent="Window Contents Margin/Window Contents/Settings Area/Left Panel/Display/Display Options Margin"]
 layout_mode = 2
 
-[node name="Display header" type="Label" parent="Window/Window Contents Margin/Window Contents/Settings Area/Left Panel/Display/Display Options Margin/Display Options"]
+[node name="Display header" type="Label" parent="Window Contents Margin/Window Contents/Settings Area/Left Panel/Display/Display Options Margin/Display Options"]
 layout_mode = 2
 size_flags_horizontal = 0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = " Display "
 vertical_alignment = 1
 
-[node name="Window Mode" type="OptionButton" parent="Window/Window Contents Margin/Window Contents/Settings Area/Left Panel/Display/Display Options Margin/Display Options"]
+[node name="Window Mode" type="OptionButton" parent="Window Contents Margin/Window Contents/Settings Area/Left Panel/Display/Display Options Margin/Display Options"]
 layout_mode = 2
 focus_mode = 0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -236,7 +173,7 @@ popup/item_2/id = 2
 popup/item_3/text = "Windowed"
 popup/item_3/id = 3
 
-[node name="VSync" type="CheckBox" parent="Window/Window Contents Margin/Window Contents/Settings Area/Left Panel/Display/Display Options Margin/Display Options"]
+[node name="VSync" type="CheckBox" parent="Window Contents Margin/Window Contents/Settings Area/Left Panel/Display/Display Options Margin/Display Options"]
 layout_mode = 2
 focus_mode = 0
 theme_override_constants/check_v_offset = 2
@@ -248,10 +185,10 @@ theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_aaf83")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_gqn3f")
 text = "V-Sync"
 
-[node name="FPSLimit Parent" type="HBoxContainer" parent="Window/Window Contents Margin/Window Contents/Settings Area/Left Panel/Display/Display Options Margin/Display Options"]
+[node name="FPSLimit Parent" type="HBoxContainer" parent="Window Contents Margin/Window Contents/Settings Area/Left Panel/Display/Display Options Margin/Display Options"]
 layout_mode = 2
 
-[node name="FPSLimit" type="CheckBox" parent="Window/Window Contents Margin/Window Contents/Settings Area/Left Panel/Display/Display Options Margin/Display Options/FPSLimit Parent"]
+[node name="FPSLimit" type="CheckBox" parent="Window Contents Margin/Window Contents/Settings Area/Left Panel/Display/Display Options Margin/Display Options/FPSLimit Parent"]
 layout_mode = 2
 focus_mode = 0
 theme_override_constants/check_v_offset = 2
@@ -263,28 +200,28 @@ theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_aaf83")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_gqn3f")
 text = "Frame Rate Limit"
 
-[node name="Spacer" type="Control" parent="Window/Window Contents Margin/Window Contents/Settings Area/Left Panel/Display/Display Options Margin/Display Options/FPSLimit Parent"]
+[node name="Spacer" type="Control" parent="Window Contents Margin/Window Contents/Settings Area/Left Panel/Display/Display Options Margin/Display Options/FPSLimit Parent"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="maxFPS" type="SpinBox" parent="Window/Window Contents Margin/Window Contents/Settings Area/Left Panel/Display/Display Options Margin/Display Options/FPSLimit Parent"]
+[node name="maxFPS" type="SpinBox" parent="Window Contents Margin/Window Contents/Settings Area/Left Panel/Display/Display Options Margin/Display Options/FPSLimit Parent"]
 layout_mode = 2
 theme_override_icons/updown = ExtResource("14_d1vkh")
 value = 55.0
 rounded = true
 update_on_text_changed = true
 
-[node name="Graphics" type="PanelContainer" parent="Window/Window Contents Margin/Window Contents/Settings Area/Left Panel"]
+[node name="Graphics" type="PanelContainer" parent="Window Contents Margin/Window Contents/Settings Area/Left Panel"]
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Graphics Background Margin" type="MarginContainer" parent="Window/Window Contents Margin/Window Contents/Settings Area/Left Panel/Graphics"]
+[node name="Graphics Background Margin" type="MarginContainer" parent="Window Contents Margin/Window Contents/Settings Area/Left Panel/Graphics"]
 layout_mode = 2
 theme_override_constants/margin_top = 11
 
-[node name="Background" type="NinePatchRect" parent="Window/Window Contents Margin/Window Contents/Settings Area/Left Panel/Graphics/Graphics Background Margin"]
+[node name="Background" type="NinePatchRect" parent="Window Contents Margin/Window Contents/Settings Area/Left Panel/Graphics/Graphics Background Margin"]
 material = SubResource("CanvasItemMaterial_mlega")
 layout_mode = 2
 size_flags_vertical = 3
@@ -294,24 +231,24 @@ patch_margin_top = 3
 patch_margin_right = 3
 patch_margin_bottom = 3
 
-[node name="Graphics Options Margin" type="MarginContainer" parent="Window/Window Contents Margin/Window Contents/Settings Area/Left Panel/Graphics"]
+[node name="Graphics Options Margin" type="MarginContainer" parent="Window Contents Margin/Window Contents/Settings Area/Left Panel/Graphics"]
 layout_mode = 2
 theme_override_constants/margin_left = 7
 theme_override_constants/margin_top = 2
 theme_override_constants/margin_right = 7
 theme_override_constants/margin_bottom = 2
 
-[node name="Graphics Options" type="VBoxContainer" parent="Window/Window Contents Margin/Window Contents/Settings Area/Left Panel/Graphics/Graphics Options Margin"]
+[node name="Graphics Options" type="VBoxContainer" parent="Window Contents Margin/Window Contents/Settings Area/Left Panel/Graphics/Graphics Options Margin"]
 layout_mode = 2
 
-[node name="Graphics header" type="Label" parent="Window/Window Contents Margin/Window Contents/Settings Area/Left Panel/Graphics/Graphics Options Margin/Graphics Options"]
+[node name="Graphics header" type="Label" parent="Window Contents Margin/Window Contents/Settings Area/Left Panel/Graphics/Graphics Options Margin/Graphics Options"]
 layout_mode = 2
 size_flags_horizontal = 0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = " Graphics "
 vertical_alignment = 1
 
-[node name="AntiAliasing" type="CheckBox" parent="Window/Window Contents Margin/Window Contents/Settings Area/Left Panel/Graphics/Graphics Options Margin/Graphics Options"]
+[node name="AntiAliasing" type="CheckBox" parent="Window Contents Margin/Window Contents/Settings Area/Left Panel/Graphics/Graphics Options Margin/Graphics Options"]
 layout_mode = 2
 focus_mode = 0
 theme_override_constants/check_v_offset = 2
@@ -323,7 +260,7 @@ theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_aaf83")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_gqn3f")
 text = "Anti-Aliasing (FXAA)"
 
-[node name="Shadows" type="CheckBox" parent="Window/Window Contents Margin/Window Contents/Settings Area/Left Panel/Graphics/Graphics Options Margin/Graphics Options"]
+[node name="Shadows" type="CheckBox" parent="Window Contents Margin/Window Contents/Settings Area/Left Panel/Graphics/Graphics Options Margin/Graphics Options"]
 layout_mode = 2
 focus_mode = 0
 theme_override_constants/check_v_offset = 2
@@ -335,21 +272,21 @@ theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_aaf83")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_gqn3f")
 text = "Shadows"
 
-[node name="Right Panel" type="VBoxContainer" parent="Window/Window Contents Margin/Window Contents/Settings Area"]
+[node name="Right Panel" type="VBoxContainer" parent="Window Contents Margin/Window Contents/Settings Area"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Audio" type="PanelContainer" parent="Window/Window Contents Margin/Window Contents/Settings Area/Right Panel"]
+[node name="Audio" type="PanelContainer" parent="Window Contents Margin/Window Contents/Settings Area/Right Panel"]
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Audio Background Margin" type="MarginContainer" parent="Window/Window Contents Margin/Window Contents/Settings Area/Right Panel/Audio"]
+[node name="Audio Background Margin" type="MarginContainer" parent="Window Contents Margin/Window Contents/Settings Area/Right Panel/Audio"]
 layout_mode = 2
 theme_override_constants/margin_top = 11
 
-[node name="Background" type="NinePatchRect" parent="Window/Window Contents Margin/Window Contents/Settings Area/Right Panel/Audio/Audio Background Margin"]
+[node name="Background" type="NinePatchRect" parent="Window Contents Margin/Window Contents/Settings Area/Right Panel/Audio/Audio Background Margin"]
 material = SubResource("CanvasItemMaterial_mlega")
 layout_mode = 2
 size_flags_vertical = 3
@@ -359,64 +296,64 @@ patch_margin_top = 3
 patch_margin_right = 3
 patch_margin_bottom = 3
 
-[node name="Audio Options Margin" type="MarginContainer" parent="Window/Window Contents Margin/Window Contents/Settings Area/Right Panel/Audio"]
+[node name="Audio Options Margin" type="MarginContainer" parent="Window Contents Margin/Window Contents/Settings Area/Right Panel/Audio"]
 layout_mode = 2
 theme_override_constants/margin_left = 7
 theme_override_constants/margin_top = 2
 theme_override_constants/margin_right = 7
 theme_override_constants/margin_bottom = 2
 
-[node name="Audio Options" type="VBoxContainer" parent="Window/Window Contents Margin/Window Contents/Settings Area/Right Panel/Audio/Audio Options Margin"]
+[node name="Audio Options" type="VBoxContainer" parent="Window Contents Margin/Window Contents/Settings Area/Right Panel/Audio/Audio Options Margin"]
 layout_mode = 2
 
-[node name="Audio header" type="Label" parent="Window/Window Contents Margin/Window Contents/Settings Area/Right Panel/Audio/Audio Options Margin/Audio Options"]
+[node name="Audio header" type="Label" parent="Window Contents Margin/Window Contents/Settings Area/Right Panel/Audio/Audio Options Margin/Audio Options"]
 layout_mode = 2
 size_flags_horizontal = 0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = " Audio "
 vertical_alignment = 1
 
-[node name="Music" type="Label" parent="Window/Window Contents Margin/Window Contents/Settings Area/Right Panel/Audio/Audio Options Margin/Audio Options"]
+[node name="Music" type="Label" parent="Window Contents Margin/Window Contents/Settings Area/Right Panel/Audio/Audio Options Margin/Audio Options"]
 layout_mode = 2
 size_flags_horizontal = 0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Music"
 vertical_alignment = 1
 
-[node name="Music Volume Slider" type="HSlider" parent="Window/Window Contents Margin/Window Contents/Settings Area/Right Panel/Audio/Audio Options Margin/Audio Options"]
+[node name="Music Volume Slider" type="HSlider" parent="Window Contents Margin/Window Contents/Settings Area/Right Panel/Audio/Audio Options Margin/Audio Options"]
 layout_mode = 2
 
-[node name="Effects" type="Label" parent="Window/Window Contents Margin/Window Contents/Settings Area/Right Panel/Audio/Audio Options Margin/Audio Options"]
+[node name="Effects" type="Label" parent="Window Contents Margin/Window Contents/Settings Area/Right Panel/Audio/Audio Options Margin/Audio Options"]
 layout_mode = 2
 size_flags_horizontal = 0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Effects"
 vertical_alignment = 1
 
-[node name="Effects Volume Slider" type="HSlider" parent="Window/Window Contents Margin/Window Contents/Settings Area/Right Panel/Audio/Audio Options Margin/Audio Options"]
+[node name="Effects Volume Slider" type="HSlider" parent="Window Contents Margin/Window Contents/Settings Area/Right Panel/Audio/Audio Options Margin/Audio Options"]
 layout_mode = 2
 
-[node name="Voices" type="Label" parent="Window/Window Contents Margin/Window Contents/Settings Area/Right Panel/Audio/Audio Options Margin/Audio Options"]
+[node name="Voices" type="Label" parent="Window Contents Margin/Window Contents/Settings Area/Right Panel/Audio/Audio Options Margin/Audio Options"]
 layout_mode = 2
 size_flags_horizontal = 0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Voices"
 vertical_alignment = 1
 
-[node name="Voices Volume Slider" type="HSlider" parent="Window/Window Contents Margin/Window Contents/Settings Area/Right Panel/Audio/Audio Options Margin/Audio Options"]
+[node name="Voices Volume Slider" type="HSlider" parent="Window Contents Margin/Window Contents/Settings Area/Right Panel/Audio/Audio Options Margin/Audio Options"]
 layout_mode = 2
 
-[node name="Gameplay" type="PanelContainer" parent="Window/Window Contents Margin/Window Contents/Settings Area/Right Panel"]
+[node name="Gameplay" type="PanelContainer" parent="Window Contents Margin/Window Contents/Settings Area/Right Panel"]
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Gameplay Background Margin" type="MarginContainer" parent="Window/Window Contents Margin/Window Contents/Settings Area/Right Panel/Gameplay"]
+[node name="Gameplay Background Margin" type="MarginContainer" parent="Window Contents Margin/Window Contents/Settings Area/Right Panel/Gameplay"]
 layout_mode = 2
 theme_override_constants/margin_top = 11
 
-[node name="Background" type="NinePatchRect" parent="Window/Window Contents Margin/Window Contents/Settings Area/Right Panel/Gameplay/Gameplay Background Margin"]
+[node name="Background" type="NinePatchRect" parent="Window Contents Margin/Window Contents/Settings Area/Right Panel/Gameplay/Gameplay Background Margin"]
 material = SubResource("CanvasItemMaterial_mlega")
 layout_mode = 2
 size_flags_vertical = 3
@@ -426,24 +363,24 @@ patch_margin_top = 3
 patch_margin_right = 3
 patch_margin_bottom = 3
 
-[node name="Gameplay Options Margin" type="MarginContainer" parent="Window/Window Contents Margin/Window Contents/Settings Area/Right Panel/Gameplay"]
+[node name="Gameplay Options Margin" type="MarginContainer" parent="Window Contents Margin/Window Contents/Settings Area/Right Panel/Gameplay"]
 layout_mode = 2
 theme_override_constants/margin_left = 7
 theme_override_constants/margin_top = 2
 theme_override_constants/margin_right = 7
 theme_override_constants/margin_bottom = 2
 
-[node name="Gameplay Options" type="VBoxContainer" parent="Window/Window Contents Margin/Window Contents/Settings Area/Right Panel/Gameplay/Gameplay Options Margin"]
+[node name="Gameplay Options" type="VBoxContainer" parent="Window Contents Margin/Window Contents/Settings Area/Right Panel/Gameplay/Gameplay Options Margin"]
 layout_mode = 2
 
-[node name="Gameplay header" type="Label" parent="Window/Window Contents Margin/Window Contents/Settings Area/Right Panel/Gameplay/Gameplay Options Margin/Gameplay Options"]
+[node name="Gameplay header" type="Label" parent="Window Contents Margin/Window Contents/Settings Area/Right Panel/Gameplay/Gameplay Options Margin/Gameplay Options"]
 layout_mode = 2
 size_flags_horizontal = 0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = " Gameplay "
 vertical_alignment = 1
 
-[node name="Subtitles" type="CheckBox" parent="Window/Window Contents Margin/Window Contents/Settings Area/Right Panel/Gameplay/Gameplay Options Margin/Gameplay Options"]
+[node name="Subtitles" type="CheckBox" parent="Window Contents Margin/Window Contents/Settings Area/Right Panel/Gameplay/Gameplay Options Margin/Gameplay Options"]
 layout_mode = 2
 focus_mode = 0
 theme_override_constants/check_v_offset = 2
@@ -455,7 +392,7 @@ theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_aaf83")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_gqn3f")
 text = "Subtitles"
 
-[node name="Auto-Defend" type="CheckBox" parent="Window/Window Contents Margin/Window Contents/Settings Area/Right Panel/Gameplay/Gameplay Options Margin/Gameplay Options"]
+[node name="Auto-Defend" type="CheckBox" parent="Window Contents Margin/Window Contents/Settings Area/Right Panel/Gameplay/Gameplay Options Margin/Gameplay Options"]
 layout_mode = 2
 focus_mode = 0
 theme_override_constants/check_v_offset = 2
@@ -467,7 +404,7 @@ theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_aaf83")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_gqn3f")
 text = "Auto-Defend"
 
-[node name="Modern Controls" type="CheckBox" parent="Window/Window Contents Margin/Window Contents/Settings Area/Right Panel/Gameplay/Gameplay Options Margin/Gameplay Options"]
+[node name="Modern Controls" type="CheckBox" parent="Window Contents Margin/Window Contents/Settings Area/Right Panel/Gameplay/Gameplay Options Margin/Gameplay Options"]
 visible = false
 layout_mode = 2
 focus_mode = 0
@@ -480,19 +417,19 @@ theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_aaf83")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_gqn3f")
 text = "Modern Controls"
 
-[node name="Path bar" type="HBoxContainer" parent="Window/Window Contents Margin/Window Contents" node_paths=PackedStringArray("fileDialog", "lineEdit")]
+[node name="Path bar" type="HBoxContainer" parent="Window Contents Margin/Window Contents" node_paths=PackedStringArray("fileDialog", "lineEdit")]
 layout_mode = 2
 theme_override_constants/separation = 7
-script = ExtResource("15_1426b")
-fileDialog = NodePath("../../../../NativeFileDialog")
+script = ExtResource("16_bgvux")
+fileDialog = NodePath("../../../NativeFileDialog")
 lineEdit = NodePath("LineEdit")
 
-[node name="Label" type="Label" parent="Window/Window Contents Margin/Window Contents/Path bar"]
+[node name="Label" type="Label" parent="Window Contents Margin/Window Contents/Path bar"]
 layout_mode = 2
 text = "Redguard Path:"
 vertical_alignment = 1
 
-[node name="LineEdit" type="LineEdit" parent="Window/Window Contents Margin/Window Contents/Path bar"]
+[node name="LineEdit" type="LineEdit" parent="Window Contents Margin/Window Contents/Path bar"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_placeholder_color = Color(0.478431, 0.478431, 0.478431, 1)
@@ -500,30 +437,30 @@ placeholder_text = " The folder containing REDGUARD.EXE"
 caret_blink = true
 caret_blink_interval = 0.5
 
-[node name="SelectPath" type="Button" parent="Window/Window Contents Margin/Window Contents/Path bar"]
+[node name="SelectPath" type="Button" parent="Window Contents Margin/Window Contents/Path bar"]
 layout_mode = 2
 text = " ... "
 
-[node name="Button Bar" type="HBoxContainer" parent="Window/Window Contents Margin/Window Contents"]
+[node name="Button Bar" type="HBoxContainer" parent="Window Contents Margin/Window Contents"]
 layout_mode = 2
 
-[node name="Defaults" type="Button" parent="Window/Window Contents Margin/Window Contents/Button Bar"]
+[node name="Defaults" type="Button" parent="Window Contents Margin/Window Contents/Button Bar"]
 custom_minimum_size = Vector2(96, 0)
 layout_mode = 2
 focus_mode = 0
 text = "Defaults"
 
-[node name="Spacer" type="Control" parent="Window/Window Contents Margin/Window Contents/Button Bar"]
+[node name="Spacer" type="Control" parent="Window Contents Margin/Window Contents/Button Bar"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Cancel" type="Button" parent="Window/Window Contents Margin/Window Contents/Button Bar"]
+[node name="Cancel" type="Button" parent="Window Contents Margin/Window Contents/Button Bar"]
 custom_minimum_size = Vector2(96, 0)
 layout_mode = 2
 focus_mode = 0
 text = "Cancel"
 
-[node name="Ok" type="Button" parent="Window/Window Contents Margin/Window Contents/Button Bar"]
+[node name="Ok" type="Button" parent="Window Contents Margin/Window Contents/Button Bar"]
 custom_minimum_size = Vector2(96, 23)
 layout_mode = 2
 focus_mode = 0
@@ -537,9 +474,9 @@ unique_name_in_owner = true
 
 [connection signal="about_to_popup" from="." to="ConfigManager" method="_on_options_window_about_to_popup"]
 [connection signal="close_requested" from="." to="." method="_on_close_requested"]
-[connection signal="pressed" from="Window/Window Contents Margin/Window Contents/Settings Area/Left Panel/Display/Display Options Margin/Display Options/VSync" to="ConfigManager/ButtonSignalReceiver" method="_on_v_sync_pressed"]
-[connection signal="pressed" from="Window/Window Contents Margin/Window Contents/Settings Area/Left Panel/Display/Display Options Margin/Display Options/FPSLimit Parent/FPSLimit" to="ConfigManager/ButtonSignalReceiver" method="_on_fps_limit_pressed"]
-[connection signal="pressed" from="Window/Window Contents Margin/Window Contents/Path bar/SelectPath" to="Window/Window Contents Margin/Window Contents/Path bar" method="_on_select_path_pressed"]
-[connection signal="pressed" from="Window/Window Contents Margin/Window Contents/Button Bar/Defaults" to="ConfigManager/ButtonSignalReceiver" method="_on_defaults_pressed"]
-[connection signal="pressed" from="Window/Window Contents Margin/Window Contents/Button Bar/Cancel" to="ConfigManager/ButtonSignalReceiver" method="_on_cancel_pressed"]
-[connection signal="pressed" from="Window/Window Contents Margin/Window Contents/Button Bar/Ok" to="ConfigManager/ButtonSignalReceiver" method="_on_ok_pressed"]
+[connection signal="pressed" from="Window Contents Margin/Window Contents/Settings Area/Left Panel/Display/Display Options Margin/Display Options/VSync" to="ConfigManager/ButtonSignalReceiver" method="_on_v_sync_pressed"]
+[connection signal="pressed" from="Window Contents Margin/Window Contents/Settings Area/Left Panel/Display/Display Options Margin/Display Options/FPSLimit Parent/FPSLimit" to="ConfigManager/ButtonSignalReceiver" method="_on_fps_limit_pressed"]
+[connection signal="pressed" from="Window Contents Margin/Window Contents/Path bar/SelectPath" to="Window Contents Margin/Window Contents/Path bar" method="_on_select_path_pressed"]
+[connection signal="pressed" from="Window Contents Margin/Window Contents/Button Bar/Defaults" to="ConfigManager/ButtonSignalReceiver" method="_on_defaults_pressed"]
+[connection signal="pressed" from="Window Contents Margin/Window Contents/Button Bar/Cancel" to="ConfigManager/ButtonSignalReceiver" method="_on_cancel_pressed"]
+[connection signal="pressed" from="Window Contents Margin/Window Contents/Button Bar/Ok" to="ConfigManager/ButtonSignalReceiver" method="_on_ok_pressed"]
