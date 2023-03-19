@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://cmhi7xo0kvied"]
+[gd_scene load_steps=16 format=3 uid="uid://cmhi7xo0kvied"]
 
 [ext_resource type="Texture2D" uid="uid://o34sfyeojsgi" path="res://Sprites/Background.png" id="1_xs0gr"]
 [ext_resource type="LabelSettings" uid="uid://bfqrdk86cm1io" path="res://Styles/Main Window Styles/TextButtonShadow_large.tres" id="2_13662"]
@@ -8,6 +8,7 @@
 [ext_resource type="Theme" uid="uid://bxe5pf3einr0o" path="res://Styles/Main Window Styles/Button.tres" id="6_gd2eh"]
 [ext_resource type="Script" path="res://Scripts/Main Window Scripts/OpenOptionsWindow.gd" id="7_w3t3n"]
 [ext_resource type="Script" path="res://Scripts/Main Window Scripts/Quit.gd" id="9_7kvq2"]
+[ext_resource type="Script" path="res://Scripts/Main Window Scripts/OpenWebsite.gd" id="9_q77og"]
 [ext_resource type="Script" path="res://Scripts/Main Window Scripts/AudioPlayer.gd" id="10_3pgcw"]
 [ext_resource type="PackedScene" uid="uid://hsdvm4xbgyuj" path="res://options_window.tscn" id="10_isej0"]
 [ext_resource type="AudioStream" uid="uid://c7qe7tgy8stp" path="res://Sounds/RATTLE1.wav" id="11_lbt5i"]
@@ -122,6 +123,8 @@ theme = ExtResource("6_gd2eh")
 text = "TECHNICAL SUPPORT"
 flat = true
 alignment = 2
+script = ExtResource("9_q77og")
+url = "https://github.com/RGUnity/redguard-unity/wiki"
 
 [node name="Bethsoft" type="Button" parent="Main Buttons"]
 layout_mode = 2
@@ -130,6 +133,8 @@ theme = ExtResource("6_gd2eh")
 text = "WWW.BETHSOFT.COM"
 flat = true
 alignment = 2
+script = ExtResource("9_q77og")
+url = "https://web.archive.org/web/20060421213800/http://redguard.bethsoft.com/"
 
 [node name="Uninstall" type="Button" parent="Main Buttons"]
 layout_mode = 2
