@@ -5,11 +5,11 @@ func _on_defaults_pressed():
 	%DefaultConfigLoader.restore_default_config()
 
 func _on_cancel_pressed():
-	%OptionsWindowPopUp.set_visible(false)
+	self.owner.close_options_window()
 
 func _on_ok_pressed():
 	%ConfigManager.set_values_and_save_config()
-	%OptionsWindowPopUp.set_visible(false)
+	self.owner.close_options_window()
 	
 func _on_v_sync_pressed():
 	%DependencyManager.update_vsync_dependencies()

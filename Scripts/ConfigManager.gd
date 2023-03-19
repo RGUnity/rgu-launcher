@@ -4,7 +4,7 @@ extends Node
 @export var windowModeDropdown: OptionButton
 @export var vsyncCheckbox: CheckBox
 @export var limitFPSCheckbox: CheckBox
-@export var maxFPSCheckbox: SpinBox
+@export var maxFPSSpinbox: SpinBox
 
 @export_group("Graphics Category")
 @export var antiAliasingCheckbox: CheckBox
@@ -27,12 +27,8 @@ extends Node
 
 var config = ConfigFile.new()
 
-func _ready():
-	#	on start, make sure this window is hidden
-	if %OptionsWindowPopUp.visible:
-		%OptionsWindowPopUp.visible = false
-		
-func _on_options_window_pop_up_about_to_popup():
+
+func _on_options_window_about_to_popup():
 	_load_config_and_set_values()
 
 
@@ -44,7 +40,7 @@ func _load_config_and_set_values():
 	windowModeDropdown.selected = config.get_value("Display", "windowMode")
 	vsyncCheckbox.button_pressed = config.get_value("Display", "vsync")
 	limitFPSCheckbox.button_pressed = config.get_value("Display", "limitFPS")
-	maxFPSCheckbox.value = config.get_value("Display", "maxFPS")
+	maxFPSSpinbox.value = config.get_value("Display", "maxFPS")
 	
 	# GRAPHICS CATEGORY GETTERS
 	antiAliasingCheckbox.button_pressed = config.get_value("Graphics", "antiAliasing")
@@ -72,7 +68,7 @@ func set_values_and_save_config():
 	config.set_value("Display", "windowMode", windowModeDropdown.selected)
 	config.set_value("Display", "vsync", vsyncCheckbox.button_pressed)
 	config.set_value("Display", "limitFPS", limitFPSCheckbox.button_pressed)
-	config.set_value("Display", "maxFPS", maxFPSCheckbox.value)
+	config.set_value("Display", "maxFPS", maxFPSSpinbox.value)
 
 	# GRAPHICS CATEGORY SETTERS
 	config.set_value("Graphics", "antiAliasing", antiAliasingCheckbox.button_pressed)

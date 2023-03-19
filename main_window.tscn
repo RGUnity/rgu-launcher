@@ -1,0 +1,144 @@
+[gd_scene load_steps=10 format=3 uid="uid://dckr4bvpr8uq0"]
+
+[ext_resource type="Texture2D" uid="uid://o34sfyeojsgi" path="res://Sprites/Background.png" id="1_xs0gr"]
+[ext_resource type="LabelSettings" uid="uid://bfqrdk86cm1io" path="res://Styles Main Window/TextButtonShadow_large.tres" id="2_ry7ei"]
+[ext_resource type="LabelSettings" uid="uid://dmnwc0n77e1a7" path="res://Styles Main Window/TextButtonShadow.tres" id="3_51yra"]
+[ext_resource type="Theme" uid="uid://h5443ot80yao" path="res://Styles Main Window/Button_large.tres" id="4_d2rdr"]
+[ext_resource type="Script" path="res://Scripts/PlayRedguard.gd" id="5_ayw7a"]
+[ext_resource type="Theme" uid="uid://bxe5pf3einr0o" path="res://Styles Main Window/Button.tres" id="6_am6ky"]
+[ext_resource type="Script" path="res://Scripts/GameOptions.gd" id="7_qfpb4"]
+[ext_resource type="Script" path="res://Scripts/Quit.gd" id="8_k57hf"]
+[ext_resource type="PackedScene" uid="uid://jnwyd45vvf66" path="res://options_window.tscn" id="10_isej0"]
+
+[node name="Main Window Root" type="Control"]
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 640.0
+offset_bottom = 480.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_xs0gr")
+
+[node name="Main Button Shadows" type="VBoxContainer" parent="."]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 229.0
+offset_top = 201.0
+offset_right = 621.0
+offset_bottom = 479.0
+theme_override_constants/separation = 8
+
+[node name="Label" type="Label" parent="Main Button Shadows"]
+self_modulate = Color(0, 0, 0, 0.533333)
+layout_mode = 2
+text = "PLAY REDGUARD"
+label_settings = ExtResource("2_ry7ei")
+horizontal_alignment = 2
+
+[node name="Label2" type="Label" parent="Main Button Shadows"]
+self_modulate = Color(0, 0, 0, 0.533333)
+layout_mode = 2
+text = "GAME OPTIONS"
+label_settings = ExtResource("3_51yra")
+horizontal_alignment = 2
+
+[node name="Label3" type="Label" parent="Main Button Shadows"]
+self_modulate = Color(0, 0, 0, 0.533333)
+layout_mode = 2
+text = "TECHNICAL SUPPORT"
+label_settings = ExtResource("3_51yra")
+horizontal_alignment = 2
+
+[node name="Label4" type="Label" parent="Main Button Shadows"]
+self_modulate = Color(0, 0, 0, 0.533333)
+layout_mode = 2
+text = "WWW.BETHSOFT.COM"
+label_settings = ExtResource("3_51yra")
+horizontal_alignment = 2
+
+[node name="Label5" type="Label" parent="Main Button Shadows"]
+self_modulate = Color(0, 0, 0, 0.533333)
+layout_mode = 2
+text = "UNINSTALL"
+label_settings = ExtResource("3_51yra")
+horizontal_alignment = 2
+
+[node name="Label6" type="Label" parent="Main Button Shadows"]
+self_modulate = Color(0, 0, 0, 0.533333)
+layout_mode = 2
+text = "QUIT"
+label_settings = ExtResource("3_51yra")
+horizontal_alignment = 2
+
+[node name="Main Buttons" type="VBoxContainer" parent="."]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 235.0
+offset_top = 194.0
+offset_right = 627.0
+offset_bottom = 477.0
+theme_override_constants/separation = 3
+
+[node name="Play Redguard" type="Button" parent="Main Buttons"]
+layout_mode = 2
+focus_mode = 0
+theme = ExtResource("4_d2rdr")
+text = "PLAY REDGUARD"
+flat = true
+alignment = 2
+script = ExtResource("5_ayw7a")
+
+[node name="Game Options" type="Button" parent="Main Buttons"]
+layout_mode = 2
+focus_mode = 0
+theme = ExtResource("6_am6ky")
+text = "GAME OPTIONS"
+flat = true
+alignment = 2
+script = ExtResource("7_qfpb4")
+windowScene = ExtResource("10_isej0")
+
+[node name="Technical Support" type="Button" parent="Main Buttons"]
+layout_mode = 2
+focus_mode = 0
+theme = ExtResource("6_am6ky")
+text = "TECHNICAL SUPPORT"
+flat = true
+alignment = 2
+
+[node name="Bethsoft" type="Button" parent="Main Buttons"]
+layout_mode = 2
+focus_mode = 0
+theme = ExtResource("6_am6ky")
+text = "WWW.BETHSOFT.COM"
+flat = true
+alignment = 2
+
+[node name="Uninstall" type="Button" parent="Main Buttons"]
+layout_mode = 2
+focus_mode = 0
+theme = ExtResource("6_am6ky")
+text = "UNINSTALL"
+flat = true
+alignment = 2
+
+[node name="Quit" type="Button" parent="Main Buttons"]
+layout_mode = 2
+focus_mode = 0
+theme = ExtResource("6_am6ky")
+text = "QUIT"
+flat = true
+alignment = 2
+script = ExtResource("8_k57hf")

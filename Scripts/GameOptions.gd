@@ -1,8 +1,12 @@
 extends Button
-@export var windowPath: NodePath
-var window
+@export var windowScene: PackedScene
 
 func _pressed():
-	window = get_node(windowPath)
-	window.popup_centered()
+	
+	var popup = windowScene.instantiate()
+	var sceneRoot = self.owner
+	sceneRoot.add_child(popup)
+	popup.popup()
+
+
 
