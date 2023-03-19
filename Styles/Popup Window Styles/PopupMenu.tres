@@ -219,6 +219,7 @@ OptionButton/constants/arrow_margin = 2
 OptionButton/icons/arrow = ExtResource("14_3g5xn")
 PopupMenu/colors/font_color = Color(0, 0, 0, 1)
 PopupMenu/colors/font_color_hover = Color(1, 1, 1, 1)
+PopupMenu/font_sizes/font_size = 12
 PopupMenu/icons/radio_checked = ExtResource("15_3ogbk")
 PopupMenu/icons/radio_unchecked = SubResource("3")
 PopupMenu/styles/hover = SubResource("2")
