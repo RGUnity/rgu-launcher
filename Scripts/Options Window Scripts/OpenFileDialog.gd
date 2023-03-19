@@ -13,11 +13,4 @@ func _on_select_path_pressed():
 
 # When that dialog returns a path, set it as the text for the lineEdit
 func _on_native_file_dialog_dir_selected(dir):
-
-	
-	# dirty workaround because the options window ... 
-	# ... currently hides itself if you click away, ...
-	# ... even if "Always on top" is enabled.
-	%OptionsWindowPopUp.popup_centered()
-	
 	lineEdit.text = dir
