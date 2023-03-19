@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dsea6as3v4jw0"]
+[gd_scene load_steps=10 format=3 uid="uid://cmhi7xo0kvied"]
 
 [ext_resource type="Texture2D" uid="uid://o34sfyeojsgi" path="res://Sprites/Background.png" id="1_xs0gr"]
 [ext_resource type="LabelSettings" uid="uid://bfqrdk86cm1io" path="res://Styles/Main Window Styles/TextButtonShadow_large.tres" id="2_13662"]
@@ -6,9 +6,9 @@
 [ext_resource type="Theme" uid="uid://h5443ot80yao" path="res://Styles/Main Window Styles/Button_large.tres" id="4_yd2gn"]
 [ext_resource type="Script" path="res://Scripts/Main Window Scripts/PlayRedguard.gd" id="5_lvwkv"]
 [ext_resource type="Theme" uid="uid://bxe5pf3einr0o" path="res://Styles/Main Window Styles/Button.tres" id="6_gd2eh"]
-[ext_resource type="Script" path="res://Scripts/Main Window Scripts/GameOptions.gd" id="7_k35r3"]
+[ext_resource type="Script" path="res://Scripts/Main Window Scripts/OpenOptionsWindow.gd" id="7_w3t3n"]
 [ext_resource type="Script" path="res://Scripts/Main Window Scripts/Quit.gd" id="9_7kvq2"]
-[ext_resource type="PackedScene" path="res://options_window.tscn" id="10_isej0"]
+[ext_resource type="PackedScene" uid="uid://hsdvm4xbgyuj" path="res://options_window.tscn" id="10_isej0"]
 
 [node name="Main Window Root" type="Control"]
 texture_filter = 1
@@ -107,7 +107,7 @@ theme = ExtResource("6_gd2eh")
 text = "GAME OPTIONS"
 flat = true
 alignment = 2
-script = ExtResource("7_k35r3")
+script = ExtResource("7_w3t3n")
 windowScene = ExtResource("10_isej0")
 
 [node name="Technical Support" type="Button" parent="Main Buttons"]
