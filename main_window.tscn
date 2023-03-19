@@ -1,11 +1,10 @@
-[gd_scene load_steps=16 format=3 uid="uid://cmhi7xo0kvied"]
+[gd_scene load_steps=15 format=3 uid="uid://dhgppagy2p0l0"]
 
 [ext_resource type="Texture2D" uid="uid://o34sfyeojsgi" path="res://Sprites/Background.png" id="1_xs0gr"]
 [ext_resource type="LabelSettings" uid="uid://bfqrdk86cm1io" path="res://Styles/Main Window Styles/TextButtonShadow_large.tres" id="2_13662"]
 [ext_resource type="LabelSettings" uid="uid://dmnwc0n77e1a7" path="res://Styles/Main Window Styles/TextButtonShadow.tres" id="3_p2vdp"]
-[ext_resource type="Theme" uid="uid://h5443ot80yao" path="res://Styles/Main Window Styles/Button_large.tres" id="4_yd2gn"]
+[ext_resource type="Theme" uid="uid://bxe5pf3einr0o" path="res://Styles/Main Window Styles/MainButton.tres" id="4_nbm8l"]
 [ext_resource type="Script" path="res://Scripts/Main Window Scripts/PlayRedguard.gd" id="5_lvwkv"]
-[ext_resource type="Theme" uid="uid://bxe5pf3einr0o" path="res://Styles/Main Window Styles/Button.tres" id="6_gd2eh"]
 [ext_resource type="Script" path="res://Scripts/Main Window Scripts/OpenOptionsWindow.gd" id="7_w3t3n"]
 [ext_resource type="Script" path="res://Scripts/Main Window Scripts/Quit.gd" id="9_7kvq2"]
 [ext_resource type="Script" path="res://Scripts/Main Window Scripts/OpenWebsite.gd" id="9_q77og"]
@@ -100,7 +99,8 @@ theme_override_constants/separation = 3
 [node name="Play Redguard" type="Button" parent="Main Buttons"]
 layout_mode = 2
 focus_mode = 0
-theme = ExtResource("4_yd2gn")
+theme = ExtResource("4_nbm8l")
+theme_override_font_sizes/font_size = 48
 text = "PLAY REDGUARD"
 flat = true
 alignment = 2
@@ -109,7 +109,7 @@ script = ExtResource("5_lvwkv")
 [node name="Game Options" type="Button" parent="Main Buttons"]
 layout_mode = 2
 focus_mode = 0
-theme = ExtResource("6_gd2eh")
+theme = ExtResource("4_nbm8l")
 text = "GAME OPTIONS"
 flat = true
 alignment = 2
@@ -119,7 +119,7 @@ windowScene = ExtResource("10_isej0")
 [node name="Technical Support" type="Button" parent="Main Buttons"]
 layout_mode = 2
 focus_mode = 0
-theme = ExtResource("6_gd2eh")
+theme = ExtResource("4_nbm8l")
 text = "TECHNICAL SUPPORT"
 flat = true
 alignment = 2
@@ -129,7 +129,7 @@ url = "https://github.com/RGUnity/redguard-unity/wiki"
 [node name="Bethsoft" type="Button" parent="Main Buttons"]
 layout_mode = 2
 focus_mode = 0
-theme = ExtResource("6_gd2eh")
+theme = ExtResource("4_nbm8l")
 text = "WWW.BETHSOFT.COM"
 flat = true
 alignment = 2
@@ -139,7 +139,7 @@ url = "https://web.archive.org/web/20060421213800/http://redguard.bethsoft.com/"
 [node name="Uninstall" type="Button" parent="Main Buttons"]
 layout_mode = 2
 focus_mode = 0
-theme = ExtResource("6_gd2eh")
+theme = ExtResource("4_nbm8l")
 text = "UNINSTALL"
 flat = true
 alignment = 2
@@ -147,13 +147,14 @@ alignment = 2
 [node name="Quit" type="Button" parent="Main Buttons"]
 layout_mode = 2
 focus_mode = 0
-theme = ExtResource("6_gd2eh")
+theme = ExtResource("4_nbm8l")
 text = "QUIT"
 flat = true
 alignment = 2
 script = ExtResource("9_7kvq2")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." node_paths=PackedStringArray("buttonParent")]
+volume_db = -7.0
 script = ExtResource("10_3pgcw")
 hoverSounds = Array[AudioStream]([ExtResource("11_lbt5i"), ExtResource("12_y6138"), ExtResource("13_l0gq0")])
 pressedSounds = Array[AudioStream]([ExtResource("14_wbjay")])
