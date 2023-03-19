@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://4blwanf1y46p"]
+[gd_scene load_steps=21 format=3 uid="uid://mpven7fvkqh3"]
 
 [ext_resource type="Script" path="res://Scripts/Options Window Scripts/PopupManager.gd" id="1_qrtai"]
 [ext_resource type="Script" path="res://Scripts/Options Window Scripts/ConfigManager.gd" id="2_r83vd"]
@@ -7,10 +7,10 @@
 [ext_resource type="Script" path="res://Scripts/Options Window Scripts/SaveConfig.gd" id="5_jjxsy"]
 [ext_resource type="Script" path="res://Scripts/Options Window Scripts/ButtonSignalReceiver.gd" id="6_u7h6k"]
 [ext_resource type="Script" path="res://Scripts/Options Window Scripts/DependencyManager.gd" id="7_njjam"]
-[ext_resource type="Theme" uid="uid://npsys71erk22" path="res://Styles Popup Window/PopupMenu.tres" id="7_pwah2"]
+[ext_resource type="Theme" path="res://Styles/Popup Window Styles/PopupMenu.tres" id="8_dbpdw"]
 [ext_resource type="Texture2D" uid="uid://dbfyhoxow1dvx" path="res://Sprites/WindowBorder.png" id="8_yw34i"]
+[ext_resource type="StyleBox" uid="uid://4l8mmmx7u3qw" path="res://Styles/Popup Window Styles/DropdownStyle.tres" id="11_4ae1f"]
 [ext_resource type="Texture2D" uid="uid://dvdp55wfyfnqd" path="res://Sprites/Border.png" id="12_ha6qu"]
-[ext_resource type="StyleBox" uid="uid://4l8mmmx7u3qw" path="res://Styles Popup Window/DropdownStyle.tres" id="13_vq30m"]
 [ext_resource type="Texture2D" uid="uid://d25o7fuik0h20" path="res://Sprites/UpDown.png" id="14_d1vkh"]
 [ext_resource type="Script" path="res://Scripts/Options Window Scripts/OpenFileDialog.gd" id="16_bgvux"]
 
@@ -80,7 +80,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("7_pwah2")
+theme = ExtResource("8_dbpdw")
 texture = ExtResource("8_yw34i")
 patch_margin_left = 6
 patch_margin_top = 6
@@ -89,10 +89,13 @@ patch_margin_bottom = 6
 metadata/_edit_use_anchors_ = true
 
 [node name="Window Contents Margin" type="MarginContainer" parent="."]
-offset_right = 500.0
-offset_bottom = 375.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 size_flags_vertical = 3
-theme = ExtResource("7_pwah2")
+theme = ExtResource("8_dbpdw")
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
@@ -100,6 +103,9 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Window Contents" type="VBoxContainer" parent="Window Contents Margin"]
 layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("8_dbpdw")
 metadata/_edit_use_anchors_ = true
 
 [node name="Settings Area" type="HBoxContainer" parent="Window Contents Margin/Window Contents"]
@@ -157,11 +163,11 @@ theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_styles/focus = ExtResource("13_vq30m")
-theme_override_styles/normal = ExtResource("13_vq30m")
-theme_override_styles/hover = ExtResource("13_vq30m")
-theme_override_styles/pressed = ExtResource("13_vq30m")
-theme_override_styles/disabled = ExtResource("13_vq30m")
+theme_override_styles/focus = ExtResource("11_4ae1f")
+theme_override_styles/normal = ExtResource("11_4ae1f")
+theme_override_styles/hover = ExtResource("11_4ae1f")
+theme_override_styles/pressed = ExtResource("11_4ae1f")
+theme_override_styles/disabled = ExtResource("11_4ae1f")
 item_count = 4
 selected = 0
 popup/item_0/text = "ExclusiveFullScreen"
