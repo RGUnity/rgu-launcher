@@ -68,16 +68,16 @@ func set_values_and_save_config():
 	config.set_value("Display", "windowMode", windowModeDropdown.selected)
 	config.set_value("Display", "vsync", vsyncCheckbox.button_pressed)
 	config.set_value("Display", "limitFPS", limitFPSCheckbox.button_pressed)
-	config.set_value("Display", "maxFPS", maxFPSSpinbox.value)
+	config.set_value("Display", "maxFPS", int(maxFPSSpinbox.value))
 
 	# GRAPHICS CATEGORY SETTERS
 	config.set_value("Graphics", "antiAliasing", antiAliasingCheckbox.button_pressed)
 	config.set_value("Graphics", "shadows", shadowsCheckbox.button_pressed)
 	
 	# AUDIO CATEGORY SETTERS
-	config.set_value("Audio", "music", musicSlider.value)
-	config.set_value("Audio", "effects", effectsSlider.value)
-	config.set_value("Audio", "voices", voicesSlider.value)
+	config.set_value("Audio", "music", int(musicSlider.value))
+	config.set_value("Audio", "effects", int(effectsSlider.value))
+	config.set_value("Audio", "voices", int(voicesSlider.value))
 	
 	# GAMEPLAY CATEGORY SETTERS
 	config.set_value("Gameplay", "subtitles", subtitlesCheckbox.button_pressed)
