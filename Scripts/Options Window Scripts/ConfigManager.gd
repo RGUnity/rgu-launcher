@@ -25,38 +25,38 @@ extends Node
 @export var redguardPathLineEdit: LineEdit
 
 
-var config = ConfigFile.new()
+var config
 
 
 func _on_options_window_about_to_popup():
-	_load_config_and_set_values()
+	load_config_and_set_values()
 
 
-func _load_config_and_set_values():
+func load_config_and_set_values():
 	
 	%ConfigLoader.load_config()
 	
 	# DISPLAY CATEGORY GETTERS
-	windowModeDropdown.selected = config.get_value("Display", "windowMode")
-	vsyncCheckbox.button_pressed = config.get_value("Display", "vsync")
-	limitFPSCheckbox.button_pressed = config.get_value("Display", "limitFPS")
-	maxFPSSpinbox.value = config.get_value("Display", "maxFPS")
+	windowModeDropdown.selected = config.windowMode
+	vsyncCheckbox.button_pressed = config.vsync
+	limitFPSCheckbox.button_pressed = config.limitFPS
+	maxFPSSpinbox.value = config.maxFPS
 	
 	# GRAPHICS CATEGORY GETTERS
-	antiAliasingCheckbox.button_pressed = config.get_value("Graphics", "antiAliasing")
-	shadowsCheckbox.button_pressed = config.get_value("Graphics", "shadows")
+	antiAliasingCheckbox.button_pressed = config.antiAliasing
+	shadowsCheckbox.button_pressed = config.shadows
 	
 	# AUDIO CATEGORY GETTERS
-	musicSlider.value = config.get_value("Audio", "music")
-	effectsSlider.value = config.get_value("Audio", "effects")
-	voicesSlider.value = config.get_value("Audio", "voices")
+	musicSlider.value = config.music
+	effectsSlider.value = config.effects
+	voicesSlider.value = config.voices
 	
 	# GAMEPLAY CATEGORY GETTERS
-	subtitlesCheckbox.button_pressed = config.get_value("Gameplay", "subtitles")
-	autodefendCheckbox.button_pressed = config.get_value("Gameplay", "autoDefend")
+	subtitlesCheckbox.button_pressed = config.subtitles
+	autodefendCheckbox.button_pressed = config.autoDefend
 	
 	# FILEPATHS CATEGORY GETTERS
-	redguardPathLineEdit.text = config.get_value("FilePaths", "redguardPath")
+	redguardPathLineEdit.text = config.redguardPath
 	
 	%DependencyManager.update_vsync_dependencies()
 	%DependencyManager.update_fpslimit_dependencies()
@@ -65,25 +65,25 @@ func _load_config_and_set_values():
 func set_values_and_save_config():
 	
 	# DISPLAY CATEGORY SETTERS
-	config.set_value("Display", "windowMode", windowModeDropdown.selected)
-	config.set_value("Display", "vsync", vsyncCheckbox.button_pressed)
-	config.set_value("Display", "limitFPS", limitFPSCheckbox.button_pressed)
-	config.set_value("Display", "maxFPS", int(maxFPSSpinbox.value))
+	config.windowMode = windowModeDropdown.selected
+	config.vsync = vsyncCheckbox.button_pressed
+	config.limitFPS = limitFPSCheckbox.button_pressed
+	config.maxFPS = int(maxFPSSpinbox.value)
 
 	# GRAPHICS CATEGORY SETTERS
-	config.set_value("Graphics", "antiAliasing", antiAliasingCheckbox.button_pressed)
-	config.set_value("Graphics", "shadows", shadowsCheckbox.button_pressed)
+	config.antiAliasing = antiAliasingCheckbox.button_pressed
+	config.shadows = shadowsCheckbox.button_pressed
 	
 	# AUDIO CATEGORY SETTERS
-	config.set_value("Audio", "music", int(musicSlider.value))
-	config.set_value("Audio", "effects", int(effectsSlider.value))
-	config.set_value("Audio", "voices", int(voicesSlider.value))
+	config.music = int(musicSlider.value)
+	config.effects = int(effectsSlider.value)
+	config.voices = int(voicesSlider.value)
 	
 	# GAMEPLAY CATEGORY SETTERS
-	config.set_value("Gameplay", "subtitles", subtitlesCheckbox.button_pressed)
-	config.set_value("Gameplay", "autoDefend", autodefendCheckbox.button_pressed)
+	config.subtitles = subtitlesCheckbox.button_pressed
+	config.autoDefend = autodefendCheckbox.button_pressed
 	
 	# FILEPATHS CATEGORY SETTERS
-	config.set_value("FilePaths", "redguardPath", redguardPathLineEdit.text)
+	config.redguardPath = redguardPathLineEdit.text
 	
 	%ConfigSaver.save_config()
