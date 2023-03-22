@@ -2,7 +2,7 @@
 A Godot-based launcher to save redguard-unity settings in a json file.
 
 ## Project Status
-All the implemented GUI elements save their values to the config. The config can be reset to its defaults using `Config_default.json`.
+All the implemented GUI elements save their values to the config. The config can be reset to its defaults using [Config_default.json](https://github.com/RGUnity/redguard-unity/blob/a79288d9394c730a920748de8585102935f16e28/Assets/StreamingAssets/Config_default.json).
 
 
 ## Technical info
