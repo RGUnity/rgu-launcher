@@ -10,9 +10,10 @@ func restore_default_config():
 		
 		%ConfigManager.config = JSON.parse_string(jsonString)
 		# Save the file
-		%ConfigSaver.save_config()
+		#ConfigSaver.save_config()
 		# set the UI elements
-		%ConfigManager.load_config_and_set_values()
+		%ConfigManager.set_ui_values()
 	else: 
-		print("Default config can only be restored in build")
+		print("File " + defaultConfigPath + " not found. Are you running in Editor?")
+		
 	

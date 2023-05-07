@@ -29,12 +29,11 @@ var config
 
 
 func _on_options_window_about_to_popup():
-	load_config_and_set_values()
-
-
-func load_config_and_set_values():
-	
 	%ConfigLoader.load_config()
+	set_ui_values()
+
+
+func set_ui_values():
 	
 	if config != null:
 		# DISPLAY CATEGORY GETTERS
@@ -61,9 +60,12 @@ func load_config_and_set_values():
 		
 		%DependencyManager.update_vsync_dependencies()
 		%DependencyManager.update_fpslimit_dependencies()
+	
+	else:
+		print("Error at set_values: config is null")
 
 
-func set_values_and_save_config():
+func get_ui_values():
 	
 	if config != null:
 		# DISPLAY CATEGORY SETTERS
@@ -87,5 +89,3 @@ func set_values_and_save_config():
 		
 		# FILEPATHS CATEGORY SETTERS
 		config.redguardPath = redguardPathLineEdit.text
-		
-		%ConfigSaver.save_config()

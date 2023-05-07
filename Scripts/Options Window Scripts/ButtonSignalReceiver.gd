@@ -8,7 +8,8 @@ func _on_cancel_pressed():
 	self.owner.close_options_window()
 
 func _on_ok_pressed():
-	%ConfigManager.set_values_and_save_config()
+	%ConfigManager.get_ui_values()
+	%ConfigSaver.save_config()
 	self.owner.close_options_window()
 	
 func _on_v_sync_pressed():
